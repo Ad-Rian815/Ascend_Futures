@@ -1,0 +1,28 @@
+# Apache config for static hosting
+
+# Custom 404
+ErrorDocument 404 /404.html
+
+# Clean URLs: allow /donate to serve donate.html
+Options +MultiViews
+RewriteEngine On
+
+# Strip .html if a user types it (optional, keeps URLs tidy)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Friendly/legacy redirects
+RewriteRule ^home/?$            /index.html   [R=301,L]
+RewriteRule ^donate-now/?$      /donate.html  [R=301,L]
+RewriteRule ^give/?$            /donate.html  [R=301,L]
+RewriteRule ^about-us/?$        /about.html   [R=301,L]
+RewriteRule ^our-team/?$        /team.html    [R=301,L]
+RewriteRule ^contact-us/?$      /contact.html [R=301,L]
+RewriteRule ^impact-reports/?$  /impact.html  [R=301,L]
+RewriteRule ^reports/?$         /impact.html  [R=301,L]
+RewriteRule ^faqs/?$            /faq.html     [R=301,L]
+
+# Internally map extensionless requests to .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+)$ $1.html [L]

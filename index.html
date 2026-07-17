@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ascend Futures Foundation — Building Dreams, Transforming Communities</title>
+<meta name="description" content="Join a global movement of compassionate donors rebuilding communities and creating futures, one act of generosity at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-submenu-item">
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">About Us ▼</button>
+    <div class="mobile-submenu">
+      <a href="about.html" onclick="closeMobile()">Overview</a>
+      <a href="staff.html" onclick="closeMobile()">Staff</a>
+      <a href="board.html" onclick="closeMobile()">Board</a>
+      <a href="financials.html" onclick="closeMobile()">Financials</a>
+      <a href="press.html" onclick="closeMobile()">Press</a>
+      <a href="careers.html" onclick="closeMobile()">Careers</a>
+    </div>
+  </div>
+  <div class="mobile-submenu-item">
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Our Work ▼</button>
+    <div class="mobile-submenu">
+      <a href="our-work.html" onclick="closeMobile()">Our Work</a>
+      <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
+      <a href="impact.html" onclick="closeMobile()">Impact</a>
+      <a href="stories-insights.html" onclick="closeMobile()">Stories &amp; Insights</a>
+      <a href="campaigns-events.html" onclick="closeMobile()">Campaigns &amp; Events</a>
+    </div>
+  </div>
+  <div class="mobile-submenu-item">
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Get Involved ▼</button>
+    <div class="mobile-submenu">
+      <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
+      <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
+      <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
+    </div>
+  </div>
+  <a href="contact.html" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="mainNav">
+  <a href="index.html" class="logo" aria-label="Ascend Futures Foundation home">
+    <img class="logo-mark" src="assets/images/aff-emblem.png" alt="">
+    <span class="logo-word">Ascend Futures</span>
+  </a>
+  <ul class="nav-links">
+    <li class="has-mega">
+      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="mega">
+        <div class="mega-links">
+        <a href="about.html">Overview</a>
+        <a href="staff.html">Staff</a>
+        <a href="board.html">Board</a>
+        <a href="financials.html">Financials</a>
+        <a href="press.html">Press</a>
+        <a href="careers.html">Careers</a>
+        </div>
+        <a class="mega-feature" href="about.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&q=80')">
+          <span class="mega-feature-tag">Who we are</span>
+          <span class="mega-feature-title">Rise together</span>
+        </a>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="mega">
+        <div class="mega-links">
+        <a href="our-work.html">Our Work</a>
+        <a href="initiatives.html">Initiatives</a>
+        <a href="impact.html">Impact</a>
+        <a href="stories-insights.html">Stories &amp; Insights</a>
+        <a href="campaigns-events.html">Campaigns &amp; Events</a>
+        </div>
+        <a class="mega-feature" href="impact.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=500&q=80')">
+          <span class="mega-feature-tag">Our impact</span>
+          <span class="mega-feature-title">See the change</span>
+        </a>
+      </div>
+    </li>
+    <li class="has-mega">
+      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="mega">
+        <div class="mega-links">
+        <a href="ways-to-give.html">Ways to Give</a>
+        <a href="ways-to-give.html#volunteer">Volunteer</a>
+        <a href="corporate-partnerships.html">Corporate Partnerships</a>
+        </div>
+        <a class="mega-feature" href="ways-to-give.html#volunteer" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&q=80')">
+          <span class="mega-feature-tag">Lend a hand</span>
+          <span class="mega-feature-title">Volunteer with us</span>
+        </a>
+      </div>
+    </li>
+    <li><a href="contact.html" class="nav-top nav-contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-pill">Youth-Focused · Woman-Led · Lusaka, Zambia</div>
+    <h1>Building Dreams,<em>Transforming Communities</em></h1>
+    <p class="hero-sub">Ascend Futures Foundation advances healthy, informed, resilient, and empowered communities through youth-centered, evidence-driven, and community-led solutions.</p>
+    <div class="hero-btns">
+      <a href="our-work.html" class="btn-primary">Explore Our Work</a>
+      <a href="about.html" class="btn-ghost">Who We Are</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val">2017</div>
+        <div class="stat-lbl">Founded by HIV Prevention Advocates</div>
+      </div>
+      <div>
+        <div class="stat-val">5</div>
+        <div class="stat-lbl">Strategic Goals for 2026–2028</div>
+      </div>
+      <div>
+        <div class="stat-val">15</div>
+        <div class="stat-lbl">Communities in Our 2026 Outreach Target</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="mosaic">
+      <div class="mosaic-item"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&q=80" alt="Children learning"><div class="mosaic-tint"></div></div>
+      <div class="mosaic-item"><img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400&q=80" alt="Community"><div class="mosaic-tint"></div></div>
+      <div class="mosaic-item"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80" alt="Healthcare"><div class="mosaic-tint"></div></div>
+      <div class="mosaic-item"><img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400&q=80" alt="Volunteers"><div class="mosaic-tint"></div></div>
+      <div class="mosaic-item"><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&q=80" alt="Education"><div class="mosaic-tint"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span class="m-item">SRHR &amp; HIV Prevention</span>
+    <span class="m-item">Community Advocacy</span>
+    <span class="m-item">Systems Accountability</span>
+    <span class="m-item">Climate &amp; Health</span>
+    <span class="m-item">Mental Health &amp; Wellbeing</span>
+    <span class="m-item">Youth Leadership</span>
+    <span class="m-item">Mentorship</span>
+    <span class="m-item">Gender Equity</span>
+    <span class="m-item">Research &amp; Innovation</span>
+    <span class="m-item">Digital Engagement</span>
+    <span class="m-item">SRHR &amp; HIV Prevention</span>
+    <span class="m-item">Community Advocacy</span>
+    <span class="m-item">Systems Accountability</span>
+    <span class="m-item">Climate &amp; Health</span>
+    <span class="m-item">Mental Health &amp; Wellbeing</span>
+    <span class="m-item">Youth Leadership</span>
+    <span class="m-item">Mentorship</span>
+    <span class="m-item">Gender Equity</span>
+    <span class="m-item">Research &amp; Innovation</span>
+    <span class="m-item">Digital Engagement</span>
+  </div>
+</div>
+
+<!-- ══ CAUSES ══ -->
+<section class="section" id="causes">
+  <div class="causes-hdr reveal">
+    <div>
+      <span class="section-tag">Our Strategic Model</span>
+      <h2 class="section-h2">Where We Lead,<br>Where We Build</h2>
+    </div>
+    <a href="our-work.html" class="btn-ghost" style="flex-shrink:0">Explore Our Work</a>
+  </div>
+  <div class="causes-grid">
+    <div class="cause-card reveal" id="education">
+      <div class="cause-img-wrap">
+        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80" alt="Education">
+        <div class="cause-badge">Core Priority</div>
+      </div>
+      <div class="cause-body">
+        <div class="cause-cat">Where We Lead</div>
+        <h3>SRHR &amp; HIV Prevention</h3>
+        <p>Our flagship pillar: prevention literacy, demand generation, and access to youth-friendly, rights-based services — from oral PrEP to long-acting injectable Cabotegravir, the Dapivirine Ring, and Lenacapavir.</p>
+        
+        <a class="cause-cta" href="our-work.html">Learn More</a>
+      </div>
+    </div>
+    <div class="cause-card reveal" id="water" style="transition-delay:.1s">
+      <div class="cause-img-wrap">
+        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&q=80" alt="Clean Water">
+      </div>
+      <div class="cause-body">
+        <div class="cause-cat">Where We Lead</div>
+        <h3>Community Advocacy &amp; Systems Accountability</h3>
+        <p>Community-led monitoring, youth advocacy, and policy engagement that make health systems more responsive — we implement, and we influence the systems around implementation.</p>
+        
+        <a class="cause-cta" href="our-work.html">Learn More</a>
+      </div>
+    </div>
+    <div class="cause-card reveal" id="health" style="transition-delay:.2s">
+      <div class="cause-img-wrap">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Healthcare">
+        <div class="cause-badge new">Where We Build</div>
+      </div>
+      <div class="cause-body">
+        <div class="cause-cat">Strategic Growth</div>
+        <h3>Climate-Health &amp; Youth Mental Wellbeing</h3>
+        <p>Phased, evidence-led growth at the climate-health intersection, plus foundational capacity in community-based psychosocial support for young people.</p>
+        
+        <a class="cause-cta" href="our-work.html">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ IMPACT ══ -->
+<section class="section" id="impact">
+  <div class="impact-inner">
+    <div class="reveal">
+      <span class="section-tag">Strategic Plan 2026–2028</span>
+      <h2 class="section-h2">Clear Goals,<br>Measured Progress</h2>
+      <p class="impact-desc">Our 2026–2028 strategy sets out headline commitments, tracked through a robust Monitoring, Evaluation, Accountability and Learning (MEAL) framework.</p>
+      <div class="counters">
+        <div class="ctr-card"><div class="ctr-num">10,000</div><div class="ctr-lbl">People to Reach with HIV &amp; SRHR Services</div></div>
+        <div class="ctr-card"><div class="ctr-num">200</div><div class="ctr-lbl">Healthcare Workers to Train</div></div>
+        <div class="ctr-card"><div class="ctr-num">150</div><div class="ctr-lbl">Youth Mentorships to Establish</div></div>
+        <div class="ctr-card"><div class="ctr-num">150</div><div class="ctr-lbl">Youth-Led Community Projects</div></div>
+      </div>
+    </div>
+    <div class="impact-visual reveal" style="transition-delay:.2s">
+      <div class="imp-img-a">
+        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80" alt="Community impact">
+      </div>
+      <div class="imp-img-b">
+        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=500&q=80" alt="Volunteers">
+      </div>
+      <div class="imp-quote">"We see young people not as recipients of development but as the people already driving it."<br><small style="opacity:.7;font-size:.78rem">— Executive Director, Ascend Futures Foundation</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY ══ -->
+<section id="gallery">
+  <div class="gallery-strip">
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&q=80" alt=""><div class="gal-overlay"><span class="gal-caption">Peer Education, Lusaka</span></div></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&q=80" alt=""><div class="gal-overlay"><span class="gal-caption">Community Outreach, Zambia</span></div></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=400&q=80" alt=""><div class="gal-overlay"><span class="gal-caption">Youth Advocacy, Lusaka</span></div></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80" alt=""><div class="gal-overlay"><span class="gal-caption">Health Facility Engagement</span></div></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400&q=80" alt=""><div class="gal-overlay"><span class="gal-caption">Ascenders — Community Ambassadors</span></div></div>
+  </div>
+</section>
+
+<!-- ══ STORIES ══ -->
+<section class="section" id="stories">
+  <div class="causes-hdr reveal">
+    <div>
+      <span class="section-tag">How We Work</span>
+      <h2 class="section-h2">Principles That Guide<br>Everything We Do</h2>
+    </div>
+    <a href="about.html" class="btn-ghost" style="flex-shrink:0">More About Us</a>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <span class="qmark">✦</span>
+      <p class="testi-text">Rights-based and gender-responsive programming, with youth leadership, participation, and meaningful engagement at the centre.</p>
+      <div class="testi-author"><div><div class="auth-name">Rights &amp; Youth Leadership</div><div class="auth-loc">Implementation principle</div></div></div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.1s">
+      <span class="qmark">✦</span>
+      <p class="testi-text">Community ownership, localisation, and sustainability — locally driven solutions that strengthen resilience and accountability.</p>
+      <div class="testi-author"><div><div class="auth-name">Community Ownership</div><div class="auth-loc">Implementation principle</div></div></div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.2s">
+      <span class="qmark">✦</span>
+      <p class="testi-text">Partnership-driven implementation with evidence-informed programming, inclusion, and equity across every pillar.</p>
+      <div class="testi-author"><div><div class="auth-name">Partnership &amp; Evidence</div><div class="auth-loc">Implementation principle</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="foot-logo" aria-label="Ascend Futures Foundation home"><img class="foot-logo-img" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation"></a>
+      <p class="foot-desc">"Building Dreams, Transforming Communities." A Zambian youth-focused and woman-led non-profit advancing equitable health, gender justice, and youth leadership.<br><br>📍 Stand No 287/15, Chipata Compound, along Highland Road, Lusaka<br>✉️ info@ascendfuturesfoundation.org<br>📞 +260 770 983 978</p>
+      <div class="footer-newsletter">
+        <span class="newsletter-label">Get Updates</span>
+        <div class="newsletter-input-group">
+          <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
+          <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+      <div class="socials">
+        <a href="https://web.facebook.com/ascendfuturesfoundation" class="soc" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/ascendfutures" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://www.tiktok.com/@ascendfuturesfoundation" class="soc" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="board.html">Board</a></li>
+        <li><a href="financials.html">Financials</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Our Work</h4>
+      <ul>
+        <li><a href="initiatives.html">Initiatives</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="stories-insights.html">Stories &amp; Insights</a></li>
+        <li><a href="campaigns-events.html">Campaigns &amp; Events</a></li>
+        <li><a href="corporate-partnerships.html">Corporate Partnerships</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="ways-to-give.html#volunteer">Volunteer</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="safeguarding.html">Safeguarding</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Ascend Futures Foundation. All rights reserved.</span>
+    <span><a href="terms.html">Terms of Use</a> · Registered Non-Profit · Lusaka, Zambia</span>
+  </div>
+</footer>
+
+
+<!-- ══ SUCCESS MODAL ══ -->
+<div class="modal-wrap" id="successModal">
+  <div class="modal">
+    <div class="modal-icon">🌱</div>
+    <h2>Thank You!</h2>
+    <p id="successMsg">Thanks for reaching out — we'll be in touch soon.</p>
+    <button class="btn-primary" onclick="document.getElementById('successModal').classList.remove('show')" style="width:100%">Close</button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
