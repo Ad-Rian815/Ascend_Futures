@@ -2272,3 +2272,7 @@ footer { border-top: 1px solid var(--border); }
   display: block;
 }
 @media (max-width: 360px){ .logo .logo-full { height: 44px; } }
+
+/* ── Inline SVG icons (Lucide, ISC license) inherit brand color ── */
+.ic-icon svg { color: var(--gold-ink); }
+.modal-icon svg { color: var(--green-bright); }
