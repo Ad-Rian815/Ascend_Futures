@@ -2,12 +2,6 @@
 [build]
   publish = "."
 
-# Serve clean URLs (/donate instead of /donate.html) automatically
-[[redirects]]
-  from = "/*"
-  status = 200
-  to = "/:splat"
-
 [[headers]]
   for = "/assets/*"
   [headers.values]

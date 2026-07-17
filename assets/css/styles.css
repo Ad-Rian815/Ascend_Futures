@@ -2264,3 +2264,11 @@ footer { border-top: 1px solid var(--border); }
 
 .foot-logo { display: inline-block; margin-bottom: clamp(14px, 2.5vw, 22px); }
 .foot-logo .foot-logo-img { height: clamp(60px, 11vw, 88px); width: auto; display: block; }
+
+/* ── Nav logo: full official logo (emblem + wordmark), like the footer ── */
+.logo .logo-full {
+  height: clamp(48px, 8vw, 66px);
+  width: auto;
+  display: block;
+}
+@media (max-width: 360px){ .logo .logo-full { height: 44px; } }

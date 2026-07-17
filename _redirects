@@ -1,13 +1,17 @@
 # Netlify redirects — friendly/legacy URLs → real pages
-/home              /index.html        301
-/donate-now        /donate.html       301
-/give              /donate.html       301
-/about-us          /about.html        301
-/our-team          /team.html         301
-/contact-us        /contact.html      301
-/impact-reports    /impact.html       301
-/reports           /impact.html       301
-/faqs              /faq.html          301
+/home              /index.html              301
+/donate            /ways-to-give.html       302
+/donate-now        /ways-to-give.html       302
+/give              /ways-to-give.html       302
+/about-us          /about.html              301
+/our-team          /staff.html              301
+/team              /staff.html              301
+/causes            /initiatives.html        301
+/partners          /corporate-partnerships.html 301
+/contact-us        /contact.html            301
+/impact-reports    /impact.html             301
+/reports           /impact.html             301
+/faqs              /faq.html                301
 
 # Catch-all → custom 404 (keep this last)
-/*                 /404.html          404
+/*                 /404.html                404
