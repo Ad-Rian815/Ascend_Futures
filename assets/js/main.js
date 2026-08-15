@@ -86,6 +86,7 @@ function handleContact(e){
 
 /* ── MOBILE SUBMENU ── */
 function toggleMobileSubmenu(button) {
+  button.classList.toggle('open');
   button.nextElementSibling.classList.toggle('open');
 }
 

@@ -8,14 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 </head>
 <body>
 
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">About Us ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>About Us</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="about.html" onclick="closeMobile()">Overview</a>
       <a href="staff.html" onclick="closeMobile()">Staff</a>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Our Work ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
       <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
@@ -36,14 +36,14 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Get Involved ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Get Involved</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
     </div>
   </div>
-  <a href="contact.html" onclick="closeMobile()">Contact</a>
+  <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
@@ -85,7 +85,7 @@
         </a>
       </div>
     </li>
-    <li class="has-mega">
+    <li class="has-mega mega-right">
       <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
@@ -111,6 +111,15 @@
     <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="our-work.html">Our Work</a><span>/</span>Campaigns &amp; Events</div>
     <h1>Campaigns &amp; Activities <em>2026–2028</em></h1>
     <p>The activity streams from our implementation framework — dates and locations are announced on our social channels.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:0">
+  <div class="way-card reveal" style="max-width:1120px;margin:0 auto;background:linear-gradient(150deg,rgba(36,204,144,.07),rgba(252,156,0,.07))">
+    <span class="section-tag">Key Event — World AIDS Day 2025</span>
+    <h3 style="margin:8px 0 10px">Zambia's Official Launch of Long-Acting Injectable Lenacapavir</h3>
+    <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.75;margin-bottom:10px">AFF played a visible and catalytic role in the 2025 World AIDS Day commemoration — which also served as Zambia's official launch of long-acting injectable Lenacapavir, and marked our first participation in a national World AIDS Day event. Our contribution included community mobilisation, media engagement, training of healthcare providers and mobilisers, and developing information, education, and communication materials for the rollout.</p>
+    <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.75">Officiated by the Honourable Minister of Health and aligned with the global theme "Overcoming Disruption, Transforming the AIDS Response," the event signalled a significant expansion of HIV prevention options in Zambia — with grateful acknowledgement of AVAC's instrumental support.</p>
   </div>
 </section>
 
@@ -213,6 +222,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=6"></script>
 </body>
 </html>

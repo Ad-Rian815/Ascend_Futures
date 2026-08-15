@@ -8,14 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 </head>
 <body>
 
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">About Us ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>About Us</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="about.html" onclick="closeMobile()">Overview</a>
       <a href="staff.html" onclick="closeMobile()">Staff</a>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Our Work ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
       <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
@@ -36,14 +36,14 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Get Involved ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Get Involved</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
     </div>
   </div>
-  <a href="contact.html" onclick="closeMobile()">Contact</a>
+  <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
@@ -85,7 +85,7 @@
         </a>
       </div>
     </li>
-    <li class="has-mega">
+    <li class="has-mega mega-right">
       <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
@@ -117,34 +117,34 @@
 <section class="section">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(16px,3vw,26px);max-width:1120px;margin:0 auto">
     <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
+      <span class="section-tag">Milestone</span>
+      <h3 style="margin:8px 0 10px">World AIDS Day 2025: Launching Lenacapavir</h3>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Our first national World AIDS Day — and Zambia's official launch of long-acting injectable Lenacapavir. AFF mobilised communities, trained providers and mobilisers, and adapted IEC materials for the rollout, with instrumental support from AVAC.</p>
+    </div>
+    <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
       <span class="section-tag">HIV Prevention</span>
-      <h3 style="margin:8px 0 10px">Advocating for New Prevention Choices</h3>
-      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Supporting advocacy and community engagement for the rollout of innovative HIV prevention options — Cabotegravir, Lenacapavir, and the Dapivirine Vaginal Ring — so young people can choose what works for their lives.</p>
-    </div>
-    <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
-      <span class="section-tag">Peer-Led Programming</span>
-      <h3 style="margin:8px 0 10px">AGYW at the Centre</h3>
-      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Youth-friendly HIV prevention programming for Adolescent Girls and Young Women in high-burden communities, delivered through peer-led, community-based approaches that build trust and uptake.</p>
-    </div>
-    <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
-      <span class="section-tag">Consortium Partnerships</span>
-      <h3 style="margin:8px 0 10px">Learning Alongside SHIELD, Empower Her &amp; AWPCAB</h3>
-      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Participating in multi-stakeholder HIV prevention and health systems strengthening initiatives — supporting mobilisation, accountability, and demand creation.</p>
-    </div>
-    <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
-      <span class="section-tag">Safeguarding</span>
-      <h3 style="margin:8px 0 10px">Safer Schools &amp; Communities</h3>
-      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Child safeguarding initiatives through school and community platforms, promoting safer environments and strengthening protection for children and adolescents.</p>
+      <h3 style="margin:8px 0 10px">SHIELD: Keeping PrEP Services Running</h3>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">With Coalition Health Zambia, Latu Human Rights Foundation and the Ministry of Health, SHIELD strengthens continuity of injectable PrEP (CAB) services across 23 facilities in 10 districts — closing gaps in staffing, data, commodities and follow-up.</p>
     </div>
     <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
       <span class="section-tag">Youth Leadership</span>
-      <h3 style="margin:8px 0 10px">Ascenders: Trusted Voices</h3>
-      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Peer-led engagement models that recruit and empower trusted young people from within the communities they serve — improving accessibility and service uptake.</p>
+      <h3 style="margin:8px 0 10px">Her Choice, Her Power</h3>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Young ambassadors in Lusaka, Chongwe and Chilanga are challenging stigma, sharing accurate prevention information, and leading peer-to-peer learning — a growing network of champions supported by Aidsfonds.</p>
     </div>
     <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
-      <span class="section-tag">Insight</span>
-      <h3 style="margin:8px 0 10px">Why We Chose a Tiered Strategy</h3>
-      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Rather than spreading thin, we concentrate our strongest capabilities where we have credibility and trust, while building deliberately in climate-health and mental wellbeing.</p>
+      <span class="section-tag">Community Voice</span>
+      <h3 style="margin:8px 0 10px">Listening on the PrEP Ring</h3>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">With IPM (Population Council South Africa), we hold dialogue sessions and youth-friendly consultations with adolescent girls and young women — surfacing real user experiences, busting myths, and improving Dapivirine Vaginal Ring service delivery.</p>
+    </div>
+    <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
+      <span class="section-tag">Climate Action</span>
+      <h3 style="margin:8px 0 10px">Kapilyomba: Planting Resilience</h3>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">Community tree planting and climate education that restore degraded landscapes and build environmental stewardship — young people leading healthier, more resilient communities.</p>
+    </div>
+    <div class="story-card reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(20px,3.5vw,28px);transition:transform .3s, box-shadow .3s">
+      <span class="section-tag">Child Protection</span>
+      <h3 style="margin:8px 0 10px">Ending Child Marriage in Chongwe</h3>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.7">School clubs, traditional leaders, and community structures working together for prevention, early identification and response — supported through the African Union and Restless Development Uganda.</p>
     </div>
   </div>
   <div style="text-align:center;margin-top:clamp(26px,4vw,40px)">
@@ -210,6 +210,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=6"></script>
 </body>
 </html>

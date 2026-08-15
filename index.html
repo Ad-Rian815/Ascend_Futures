@@ -8,14 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 </head>
 <body>
 
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">About Us ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>About Us</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="about.html" onclick="closeMobile()">Overview</a>
       <a href="staff.html" onclick="closeMobile()">Staff</a>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Our Work ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
       <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
@@ -36,14 +36,14 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Get Involved ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Get Involved</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
     </div>
   </div>
-  <a href="contact.html" onclick="closeMobile()">Contact</a>
+  <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
@@ -85,7 +85,7 @@
         </a>
       </div>
     </li>
-    <li class="has-mega">
+    <li class="has-mega mega-right">
       <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
@@ -118,16 +118,16 @@
     </div>
     <div class="hero-stats">
       <div>
-        <div class="stat-val">2017</div>
-        <div class="stat-lbl">Founded by HIV Prevention Advocates</div>
+        <div class="stat-val">12</div>
+        <div class="stat-lbl">Districts of Implementation, 7 Provinces</div>
       </div>
       <div>
-        <div class="stat-val">5</div>
-        <div class="stat-lbl">Strategic Goals for 2026–2028</div>
+        <div class="stat-val">413,082</div>
+        <div class="stat-lbl">People Reached Digitally</div>
       </div>
       <div>
-        <div class="stat-val">15</div>
-        <div class="stat-lbl">Communities in Our 2026 Outreach Target</div>
+        <div class="stat-val">370</div>
+        <div class="stat-lbl">Health Providers Trained in HIV Prevention</div>
       </div>
     </div>
   </div>
@@ -223,14 +223,14 @@
 <section class="section" id="impact">
   <div class="impact-inner">
     <div class="reveal">
-      <span class="section-tag">Strategic Plan 2026–2028</span>
-      <h2 class="section-h2">Clear Goals,<br>Measured Progress</h2>
-      <p class="impact-desc">Our 2026–2028 strategy sets out headline commitments, tracked through a robust Monitoring, Evaluation, Accountability and Learning (MEAL) framework.</p>
+      <span class="section-tag">Our Impact</span>
+      <h2 class="section-h2">Real Reach,<br>Measured Progress</h2>
+      <p class="impact-desc">From health facilities to school clubs to national launches — our reach is measured and reported through a robust MEAL framework.</p>
       <div class="counters">
-        <div class="ctr-card"><div class="ctr-num">10,000</div><div class="ctr-lbl">People to Reach with HIV &amp; SRHR Services</div></div>
-        <div class="ctr-card"><div class="ctr-num">200</div><div class="ctr-lbl">Healthcare Workers to Train</div></div>
-        <div class="ctr-card"><div class="ctr-num">150</div><div class="ctr-lbl">Youth Mentorships to Establish</div></div>
-        <div class="ctr-card"><div class="ctr-num">150</div><div class="ctr-lbl">Youth-Led Community Projects</div></div>
+        <div class="ctr-card"><div class="ctr-num">4,019</div><div class="ctr-lbl">People Reached Directly</div></div>
+        <div class="ctr-card"><div class="ctr-num">413,082</div><div class="ctr-lbl">Overall Digital Reach</div></div>
+        <div class="ctr-card"><div class="ctr-num">23</div><div class="ctr-lbl">Health Facilities Supported</div></div>
+        <div class="ctr-card"><div class="ctr-num">370</div><div class="ctr-lbl">Health Service Providers Trained</div></div>
       </div>
     </div>
     <div class="impact-visual reveal" style="transition-delay:.2s">
@@ -353,6 +353,6 @@
   </div>
 </div>
 
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=6"></script>
 </body>
 </html>

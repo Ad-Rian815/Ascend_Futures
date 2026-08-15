@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Initiatives 2026–2028 — Ascend Futures Foundation</title>
+<title>Programmes & Initiatives — Ascend Futures Foundation</title>
 <meta name="description" content="Explore our ongoing initiatives and programs creating sustainable change across education, health, water, and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 </head>
 <body>
 
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">About Us ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>About Us</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="about.html" onclick="closeMobile()">Overview</a>
       <a href="staff.html" onclick="closeMobile()">Staff</a>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Our Work ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
       <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
@@ -36,14 +36,14 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Get Involved ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Get Involved</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
     </div>
   </div>
-  <a href="contact.html" onclick="closeMobile()">Contact</a>
+  <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
@@ -85,7 +85,7 @@
         </a>
       </div>
     </li>
-    <li class="has-mega">
+    <li class="has-mega mega-right">
       <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
@@ -108,74 +108,53 @@
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="our-work.html">Our Work</a><span>/</span>Initiatives</div>
-    <h1>Initiatives for <em>2026–2028</em></h1>
-    <p>Concrete programmes under each strategic goal — with targets from our implementation framework.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="our-work.html">Our Work</a><span>/</span>Programmes</div>
+    <h1>Our Programmes &amp; <em>Initiatives</em></h1>
+    <p>Active projects across SRHR &amp; HIV prevention, climate change, and child protection — implemented with communities and partners across Zambia.</p>
   </div>
 </section>
 
 <section class="section">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,3vw,26px);max-width:1120px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(16px,3vw,26px);max-width:1120px;margin:0 auto">
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-      <h3>SRHR, HIV Prevention &amp; Youth-Friendly Services</h3>
-      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
-        <li>Outreach programmes in rural &amp; underserved areas — <strong>10,000 people across 15 communities</strong></li>
-        <li>Train <strong>200 healthcare workers</strong> on inclusive care</li>
-        <li><strong>50 health education campaigns</strong> in schools &amp; community centres</li>
-        <li>Distribute <strong>5,000 resource kits</strong> (condoms, contraceptives, IEC materials)</li>
-        <li>Support <strong>5 youth-friendly health spaces</strong> with facilities &amp; local partners</li>
-      </ul>
+      <span class="section-tag">SRHR &amp; HIV Prevention</span>
+      <h3 style="margin:8px 0 6px">SHIELD Project</h3>
+      <p style="color:var(--muted);font-size:var(--fs-xs);font-weight:600;margin-bottom:10px">With Coalition Health Zambia, Latu Human Rights Foundation &amp; the Ministry of Health · Supported by ViiV Healthcare</p>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.75">Strengthening Zambia's health system so that people using long-acting injectable PrEP (CAB) continue receiving services without interruption. SHIELD responds to service disruptions caused by funding changes and wellness centre closures — addressing gaps in human resources, data systems, commodity management, and client follow-up, while supporting retention, continuity of care, safe transitions between prevention options, and informed choice.</p><p style="color:var(--gold-ink);font-size:var(--fs-sm);font-weight:600;margin-top:10px">Active in 23 health facilities across 10 districts</p>
     </div>
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
-      <h3>Community Systems, Accountability &amp; Citizen-Led Advocacy</h3>
-      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
-        <li><strong>10 workshops</strong> on gender equality &amp; menstrual health</li>
-        <li>Train <strong>50 community leaders</strong> to respond to gender-based violence</li>
-        <li><strong>3 policy briefs</strong> on ending child marriage &amp; gender representation</li>
-        <li><strong>150 mentorships</strong> connecting youth with role models</li>
-        <li><strong>150 youth</strong> through leadership &amp; entrepreneurship training</li>
-        <li><strong>150 youth-led community projects</strong> in health &amp; accountability</li>
-      </ul>
+      <span class="section-tag">SRHR &amp; HIV Prevention</span>
+      <h3 style="margin:8px 0 6px">Her Choice, Her Power</h3>
+      <p style="color:var(--muted);font-size:var(--fs-xs);font-weight:600;margin-bottom:10px">Supported by Aidsfonds</p>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.75">Accelerating access to and uptake of HIV prevention options for young women and girls in East and Southern Africa. The programme equips young ambassadors with knowledge and practical skills to challenge stigma, promote accurate HIV prevention information, facilitate peer-to-peer learning, and encourage informed decision-making — building a network of young champions who influence healthier behaviours.</p><p style="color:var(--gold-ink);font-size:var(--fs-sm);font-weight:600;margin-top:10px">Implemented in Lusaka, Chongwe &amp; Chilanga districts</p>
     </div>
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
-      <h3>Climate Resilience &amp; Healthy Communities</h3>
-      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
-        <li><strong>4 institutional learning</strong> &amp; technical exchange activities</li>
-        <li>Develop &amp; adopt <strong>1 climate-health integration framework</strong></li>
-        <li><strong>2 evidence products</strong> on climate-related health risks</li>
-        <li><strong>3 cross-sector partnerships</strong> for climate-sensitive health programming</li>
-        <li>Climate-health messaging integrated into outreach in <strong>15 communities</strong></li>
-      </ul>
+      <span class="section-tag">SRHR &amp; HIV Prevention</span>
+      <h3 style="margin:8px 0 6px">Dapivirine Vaginal Ring Community Engagement</h3>
+      <p style="color:var(--muted);font-size:var(--fs-xs);font-weight:600;margin-bottom:10px">With the International Partnership for Microbicides (IPM), an affiliate of Population Council South Africa</p>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.75">Supporting community engagement around the Dapivirine Vaginal Ring (PrEP Ring) in Zambia — working directly with adolescent girls and young women through dialogue sessions, youth-friendly consultations, and community discussions to understand user experiences, address myths, identify barriers to access, and improve service delivery.</p><p style="color:var(--gold-ink);font-size:var(--fs-sm);font-weight:600;margin-top:10px">Young people at the centre of shaping HIV prevention</p>
     </div>
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-      <h3>Youth Mental Health &amp; Psychosocial Wellbeing</h3>
-      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
-        <li>Psychosocial support integrated into <strong>all community outreach</strong></li>
-        <li><strong>20 awareness &amp; stigma-reduction sessions</strong> with young people</li>
-        <li>Train <strong>60 peer educators &amp; volunteers</strong> in basic psychosocial support</li>
-        <li><strong>2 partnerships</strong> with specialised mental health institutions</li>
-        <li>Pilot &amp; evaluate <strong>1 youth resilience intervention</strong> for future scale-up</li>
-      </ul>
+      <span class="section-tag">SRHR &amp; HIV Prevention</span>
+      <h3 style="margin:8px 0 6px">The APHA Project — AWPCAB Academy</h3>
+      <p style="color:var(--muted);font-size:var(--fs-xs);font-weight:600;margin-bottom:10px">With Advocates for the Prevention of HIV in Africa (APHA) · Funded by Gilead Sciences</p>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.75">A 10-month HIV prevention leadership initiative recruiting and training 20 Community Advocates to lead community education, mobilisation, and advocacy — strengthening community-led prevention and accountability across Zambia.</p><p style="color:var(--gold-ink);font-size:var(--fs-sm);font-weight:600;margin-top:10px">240+ community sessions · 12 facilities · 14,000 women to reach</p>
     </div>
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></div>
-      <h3>Research, Innovation, Learning &amp; Evidence</h3>
-      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
-        <li><strong>5 studies published</strong> on emerging health &amp; social challenges</li>
-        <li><strong>10 policy dialogues</strong> advocating data-driven reforms</li>
-        <li>A <strong>functional outcomes database</strong> guiding future interventions</li>
-        <li><strong>20 staff and 70 young people &amp; partners</strong> trained in advocacy</li>
-      </ul>
+      <span class="section-tag">Climate Change</span>
+      <h3 style="margin:8px 0 6px">Kapilyomba Tree Planting &amp; Climate Resilience</h3>
+      <p style="color:var(--muted);font-size:var(--fs-xs);font-weight:600;margin-bottom:10px">Community-led initiative</p>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.75">Strengthening environmental conservation and community resilience to climate change. The initiative engages community members — particularly young people — in tree planting, environmental awareness, and sustainable practices that restore degraded landscapes and improve local ecosystems, fostering long-term environmental stewardship.</p><p style="color:var(--gold-ink);font-size:var(--fs-sm);font-weight:600;margin-top:10px">Community action + climate education</p>
     </div>
-    <div class="way-card reveal" style="display:flex;flex-direction:column;justify-content:center;text-align:center;background:linear-gradient(150deg,rgba(36,204,144,.08),rgba(252,156,0,.08))">
-      <h3 style="margin-bottom:10px">Targets, not trophies</h3>
-      <p style="color:var(--muted);font-size:var(--fs-sm)">These are commitments from our 2026–2028 implementation framework — indicative targets to be confirmed through annual costing and as partnerships and funding are secured.</p>
-      <a href="corporate-partnerships.html" class="btn-primary" style="margin-top:14px;align-self:center">Help Us Get There</a>
+    <div class="way-card reveal">
+      <span class="section-tag">Child Protection</span>
+      <h3 style="margin:8px 0 6px">Empowering Communities to End Child Marriage</h3>
+      <p style="color:var(--muted);font-size:var(--fs-xs);font-weight:600;margin-bottom:10px">Supported through the African Union &amp; Restless Development Uganda</p>
+      <p style="color:var(--muted);font-size:var(--fs-sm);line-height:1.75">Working in Chongwe District to prevent child marriage through community mobilisation, school-based interventions, and multi-stakeholder collaboration — establishing Ending Child Marriage School Clubs, strengthening partnerships with traditional leaders, schools, and government, and creating community structures for prevention, early identification, and response.</p><p style="color:var(--gold-ink);font-size:var(--fs-sm);font-weight:600;margin-top:10px">Promoting girls' education &amp; safe environments</p>
     </div>
+  </div>
+  <div style="text-align:center;margin-top:clamp(26px,4vw,40px)">
+    <a href="impact.html" class="btn-primary">See Our Impact &amp; Targets</a>
   </div>
 </section>
 
@@ -237,6 +216,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=6"></script>
 </body>
 </html>

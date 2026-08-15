@@ -8,14 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 </head>
 <body>
 
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">About Us ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>About Us</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="about.html" onclick="closeMobile()">Overview</a>
       <a href="staff.html" onclick="closeMobile()">Staff</a>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Our Work ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
       <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
@@ -36,14 +36,14 @@
     </div>
   </div>
   <div class="mobile-submenu-item">
-    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn">Get Involved ▼</button>
+    <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Get Involved</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
     </div>
   </div>
-  <a href="contact.html" onclick="closeMobile()">Contact</a>
+  <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
@@ -85,7 +85,7 @@
         </a>
       </div>
     </li>
-    <li class="has-mega">
+    <li class="has-mega mega-right">
       <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
@@ -120,7 +120,7 @@
       <span class="section-tag">Who We Are</span>
       <h2 class="section-h2">Young people are best placed to <em>lead change</em></h2>
       <p style="color:var(--muted);line-height:1.8;margin-bottom:14px">Ascend Futures Foundation (AFF) is a Zambian youth-focused and woman-led non-profit organisation working to advance healthy, informed, and resilient communities. Founded in 2017 by two HIV prevention advocates from Zambia and Malawi, and formally registered as a non-profit in 2024, AFF grew out of a clear conviction: young people are not simply beneficiaries of development — they are among the people best placed to lead it.</p>
-      <p style="color:var(--muted);line-height:1.8;margin-bottom:14px">We are based in Lusaka and work across high-burden and underserved districts in Zambia, with a focus on adolescents, young people and women who are too often left out of decisions about their own health and futures.</p>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:14px">We are based in Lusaka and currently implement programmes in 12 districts across 7 provinces of Zambia, with a focus on adolescents, young people and women who are too often left out of decisions about their own health and futures.</p>
       <p style="color:var(--muted);line-height:1.8">Our work sits at the intersection of sexual and reproductive health and rights (SRHR) and HIV prevention, community advocacy and systems accountability, and the rising demands of climate, health, and youth mental wellbeing. We combine community mobilisation, advocacy, research, and partnership to strengthen both community systems and the health systems meant to serve them.</p>
     </div>
     <div class="reveal" style="transition-delay:.15s">
@@ -253,6 +253,6 @@
   </div>
 </div>
 
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=6"></script>
 </body>
 </html>
