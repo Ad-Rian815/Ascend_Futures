@@ -2781,3 +2781,46 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
   .info-card.person-card { min-height: 340px; }
   .person-card .person-photo { object-position: center 14%; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   FIX: ribbon spacing — items kept their old ticker padding, which
+   pushed the row wider than the band and clipped the ends.
+══════════════════════════════════════════════════════════════ */
+.marquee-band.static-band { overflow: hidden; }
+.marquee-band.static-band .marquee-track {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 2.2vw, 30px);
+  padding: 0 clamp(10px, 2.5vw, 28px);
+  animation: none !important;
+  transform: none !important;
+}
+.marquee-band.static-band .m-item {
+  padding: 0;                       /* ← the fix: drop the old ticker padding */
+  margin: 0;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  font-size: clamp(.62rem, 1.12vw, 1rem);
+}
+/* thin divider dots instead of wide empty gaps */
+.marquee-band.static-band .m-item + .m-item::before {
+  content: '·';
+  margin-right: clamp(10px, 2.2vw, 30px);
+  opacity: .55;
+  font-weight: 700;
+}
+@media (max-width: 820px){
+  .marquee-band.static-band .m-item { font-size: clamp(.6rem, 1.95vw, .9rem); letter-spacing: .02em; }
+  .marquee-band.static-band .marquee-track { gap: clamp(6px, 1.8vw, 14px); padding: 0 8px; }
+  .marquee-band.static-band .m-item + .m-item::before { margin-right: clamp(6px, 1.8vw, 14px); }
+}
+@media (max-width: 400px){
+  .marquee-band.static-band .m-item { font-size: .56rem; letter-spacing: 0; }
+  .marquee-band.static-band .marquee-track { gap: 5px; padding: 0 6px; }
+  .marquee-band.static-band .m-item + .m-item::before { margin-right: 5px; }
+}

@@ -218,3 +218,34 @@ function handleVolunteer(e){
     els.forEach(run);
   }
 })();
+
+
+/* ── STATIC RIBBON: shrink text until the row fits on one line ── */
+(function(){
+  var band = document.querySelector('.marquee-band.static-band');
+  if(!band) return;
+  var track = band.querySelector('.marquee-track');
+  var items = track ? track.querySelectorAll('.m-item') : [];
+  if(!items.length) return;
+
+  function fit(){
+    // start from the CSS-defined size, then step down only if needed
+    items.forEach(function(el){ el.style.fontSize = ''; });
+    var size = parseFloat(getComputedStyle(items[0]).fontSize) || 14;
+    var floor = 7;                        // never go unreadably small
+    var guard = 60;
+    while (track.scrollWidth > track.clientWidth && size > floor && guard-- > 0) {
+      size -= 0.5;
+      items.forEach(function(el){ el.style.fontSize = size + 'px'; });
+    }
+    // if it still overflows at the floor, drop letter-spacing as a last resort
+    if (track.scrollWidth > track.clientWidth) {
+      items.forEach(function(el){ el.style.letterSpacing = '0'; });
+    }
+  }
+
+  if (document.readyState === 'complete') fit();
+  else window.addEventListener('load', fit);
+  var t;
+  window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(fit, 120); });
+})();
