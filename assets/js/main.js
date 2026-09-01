@@ -12,13 +12,23 @@ function toggleMobile(){
   const mm = document.getElementById('mobileMenu');
   hb.classList.toggle('open');
   mm.classList.toggle('open');
-  document.body.style.overflow = mm.classList.contains('open') ? 'hidden' : '';
+  const open = mm.classList.contains('open');
+  hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+  document.body.style.overflow = open ? 'hidden' : '';
 }
 function closeMobile(){
-  document.getElementById('hamburger').classList.remove('open');
+  const hb = document.getElementById('hamburger');
+  hb.classList.remove('open');
+  hb.setAttribute('aria-expanded','false');
   document.getElementById('mobileMenu').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+/* close the mobile sheet if the viewport grows back to desktop */
+window.addEventListener('resize', function(){
+  const mm = document.getElementById('mobileMenu');
+  if (mm && mm.classList.contains('open') && window.innerWidth > 900) closeMobile();
+});
 
 /* ── SUCCESS MODAL (used by the contact & volunteer forms) ── */
 const SUCCESS_MODAL = `
@@ -90,20 +100,36 @@ function toggleMobileSubmenu(button) {
   button.nextElementSibling.classList.toggle('open');
 }
 
-/* ── NEWSLETTER SUBSCRIPTION (demo only) ── */
-function subscribeNewsletter() {
+/* ── NEWSLETTER SUBSCRIPTION (Netlify Forms) ── */
+function subscribeNewsletter(e) {
+  if (e) e.preventDefault();
   const emailInput = document.getElementById('newsletterEmail');
-  const note = emailInput.closest('.footer-newsletter')
-    ? emailInput.closest('.footer-newsletter').querySelector('.newsletter-note') : null;
+  const box = emailInput.closest('.footer-newsletter');
+  const note = box ? box.querySelector('.newsletter-note') : null;
   const email = emailInput.value.trim();
   const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  if(!ok){
-    if(note){ note.textContent = 'Please enter a valid email address.'; note.style.color = 'var(--gold-ink)'; }
+  if (!ok) {
+    if (note) { note.textContent = 'Please enter a valid email address.'; note.style.color = 'var(--gold-ink)'; }
     emailInput.focus();
-    return;
+    return false;
   }
-  if(note){ note.textContent = "Thanks! You're subscribed — watch your inbox."; note.style.color = 'var(--green-bright)'; }
-  emailInput.value = '';
+  if (note) { note.textContent = 'Subscribing…'; note.style.color = 'var(--muted)'; }
+  const body = new URLSearchParams({ 'form-name': 'newsletter', 'email': email }).toString();
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body
+  }).then(function (res) {
+    if (!res.ok) throw new Error('bad status');
+    if (note) { note.textContent = "Thanks! You're subscribed — watch your inbox."; note.style.color = 'var(--green-bright)'; }
+    emailInput.value = '';
+  }).catch(function () {
+    if (note) {
+      note.textContent = "Couldn't subscribe right now — please email info@ascendfuturesfoundation.org.";
+      note.style.color = 'var(--gold-ink)';
+    }
+  });
+  return false;
 }
 
 /* ── FINANCIALS TABS ── */

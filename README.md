@@ -189,3 +189,9 @@ Photos are still stock placeholders — swap in AFF's own photos (like those in 
    - Netlify also works (drag-and-drop the folder; `_redirects`/`netlify.toml` are included).
 
 Local preview: `python -m http.server 8000` → http://localhost:8000
+
+## Redesign — floating nav, photo hero, content refresh
+
+- **Navigation** rebuilt as a floating "island" bar: fixed, always visible, rounded, translucent with a blur/saturation effect, and it tightens slightly on scroll. Dropdown panels are glass cards; the right-most panel opens leftward and every panel is capped at the viewport width, so nothing can run off-screen. Feature images are now real `<img>` elements (previously CSS backgrounds that could render as empty blocks), and they drop out below 1120px so the panel shrinks to fit its links. Desktop nav collapses to the mobile sheet at 900px.
+- **Home hero** is now a full-bleed team photograph with a layered scrim that keeps headline, buttons and stats legible and fades seamlessly into the page. Stats sit on frosted-glass cards. The photo is served at two sizes (760px / 1080px) via `srcset` so phones download less.
+- **Content** updated from the latest copy document: Our Work pillars (incl. Child Protection & Gender Justice), Where We Work, Staff (Technical Advisors), About, Safeguarding (full principles + framework + how it is upheld), Programmes (PrEP Ring rename, partner lines, Her Choice facilities).

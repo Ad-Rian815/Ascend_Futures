@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=6">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
     <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
-      <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
+      <a href="initiatives.html" onclick="closeMobile()">Programmes</a>
       <a href="impact.html" onclick="closeMobile()">Impact</a>
       <a href="stories-insights.html" onclick="closeMobile()">Stories &amp; Insights</a>
       <a href="campaigns-events.html" onclick="closeMobile()">Campaigns &amp; Events</a>
@@ -41,67 +41,78 @@
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
+      <a href="safeguarding.html" onclick="closeMobile()">Safeguarding</a>
     </div>
   </div>
   <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
-<nav id="mainNav">
+<nav id="mainNav" aria-label="Main">
   <a href="index.html" class="logo" aria-label="Ascend Futures Foundation home">
-    <img class="logo-full" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation" style="height:clamp(48px,8vw,66px);width:auto">
+    <img class="logo-full" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation">
   </a>
   <ul class="nav-links">
     <li class="has-mega">
-      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="about.html">Overview</a>
-        <a href="staff.html">Staff</a>
-        <a href="board.html">Board</a>
-        <a href="financials.html">Financials</a>
-        <a href="press.html">Press</a>
-        <a href="careers.html">Careers</a>
+          <a href="about.html">Overview</a>
+          <a href="staff.html">Staff</a>
+          <a href="board.html">Board</a>
+          <a href="financials.html">Financials</a>
+          <a href="press.html">Press</a>
+          <a href="careers.html">Careers</a>
         </div>
-        <a class="mega-feature" href="about.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/community-engagement.jpg')">
-          <span class="mega-feature-tag">Who we are</span>
-          <span class="mega-feature-title">Rise together</span>
+        <a class="mega-feature" href="about.html">
+          <img src="assets/images/community-engagement.jpg" alt="AFF team member with a community member" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Who we are</span>
+            <span class="mega-feature-title">Rise together</span>
+          </span>
         </a>
       </div>
     </li>
     <li class="has-mega">
-      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="our-work.html">Our Work</a>
-        <a href="initiatives.html">Initiatives</a>
-        <a href="impact.html">Impact</a>
-        <a href="stories-insights.html">Stories &amp; Insights</a>
-        <a href="campaigns-events.html">Campaigns &amp; Events</a>
+          <a href="our-work.html">Our Work</a>
+          <a href="initiatives.html">Programmes</a>
+          <a href="impact.html">Impact</a>
+          <a href="stories-insights.html">Stories &amp; Insights</a>
+          <a href="campaigns-events.html">Campaigns &amp; Events</a>
         </div>
-        <a class="mega-feature" href="impact.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/hiv-outreach.jpg')">
-          <span class="mega-feature-tag">Our impact</span>
-          <span class="mega-feature-title">See the change</span>
+        <a class="mega-feature" href="impact.html">
+          <img src="assets/images/hiv-outreach.jpg" alt="HIV prevention outreach in the community" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Our impact</span>
+            <span class="mega-feature-title">See the change</span>
+          </span>
         </a>
       </div>
     </li>
     <li class="has-mega mega-right">
-      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="ways-to-give.html">Ways to Give</a>
-        <a href="ways-to-give.html#volunteer">Volunteer</a>
-        <a href="corporate-partnerships.html">Corporate Partnerships</a>
+          <a href="ways-to-give.html">Ways to Give</a>
+          <a href="ways-to-give.html#volunteer">Volunteer</a>
+          <a href="corporate-partnerships.html">Corporate Partnerships</a>
+          <a href="safeguarding.html">Safeguarding</a>
         </div>
-        <a class="mega-feature" href="ways-to-give.html#volunteer" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/ascender.jpg')">
-          <span class="mega-feature-tag">Lend a hand</span>
-          <span class="mega-feature-title">Volunteer with us</span>
+        <a class="mega-feature" href="ways-to-give.html#volunteer">
+          <img src="assets/images/ascender.jpg" alt="An Ascend Futures community ambassador" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Lend a hand</span>
+            <span class="mega-feature-title">Volunteer with us</span>
+          </span>
         </a>
       </div>
     </li>
-    <li><a href="contact.html" class="nav-top nav-contact">Contact</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
+  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -172,10 +183,14 @@
       <p class="foot-desc">"Building Dreams, Transforming Communities." A Zambian youth-focused and woman-led non-profit advancing equitable health, gender justice, and youth leadership.<br><br>Stand No 287/15, Chipata Compound, along Highland Road, Lusaka<br>info@ascendfuturesfoundation.org<br>+260 770 983 978</p>
       <div class="footer-newsletter">
         <span class="newsletter-label">Get Updates</span>
-        <div class="newsletter-input-group">
-          <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
-          <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
-        </div>
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return subscribeNewsletter(event)">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p hidden aria-hidden="true"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="newsletter-input-group">
+            <input type="email" name="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </div>
+        </form>
         <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
       </div>
       <div class="socials">
@@ -222,6 +237,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=6"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>

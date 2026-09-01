@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=6">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
     <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
-      <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
+      <a href="initiatives.html" onclick="closeMobile()">Programmes</a>
       <a href="impact.html" onclick="closeMobile()">Impact</a>
       <a href="stories-insights.html" onclick="closeMobile()">Stories &amp; Insights</a>
       <a href="campaigns-events.html" onclick="closeMobile()">Campaigns &amp; Events</a>
@@ -41,67 +41,78 @@
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
+      <a href="safeguarding.html" onclick="closeMobile()">Safeguarding</a>
     </div>
   </div>
   <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
-<nav id="mainNav">
+<nav id="mainNav" aria-label="Main">
   <a href="index.html" class="logo" aria-label="Ascend Futures Foundation home">
-    <img class="logo-full" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation" style="height:clamp(48px,8vw,66px);width:auto">
+    <img class="logo-full" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation">
   </a>
   <ul class="nav-links">
     <li class="has-mega">
-      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="about.html">Overview</a>
-        <a href="staff.html">Staff</a>
-        <a href="board.html">Board</a>
-        <a href="financials.html">Financials</a>
-        <a href="press.html">Press</a>
-        <a href="careers.html">Careers</a>
+          <a href="about.html">Overview</a>
+          <a href="staff.html">Staff</a>
+          <a href="board.html">Board</a>
+          <a href="financials.html">Financials</a>
+          <a href="press.html">Press</a>
+          <a href="careers.html">Careers</a>
         </div>
-        <a class="mega-feature" href="about.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/community-engagement.jpg')">
-          <span class="mega-feature-tag">Who we are</span>
-          <span class="mega-feature-title">Rise together</span>
+        <a class="mega-feature" href="about.html">
+          <img src="assets/images/community-engagement.jpg" alt="AFF team member with a community member" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Who we are</span>
+            <span class="mega-feature-title">Rise together</span>
+          </span>
         </a>
       </div>
     </li>
     <li class="has-mega">
-      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="our-work.html">Our Work</a>
-        <a href="initiatives.html">Initiatives</a>
-        <a href="impact.html">Impact</a>
-        <a href="stories-insights.html">Stories &amp; Insights</a>
-        <a href="campaigns-events.html">Campaigns &amp; Events</a>
+          <a href="our-work.html">Our Work</a>
+          <a href="initiatives.html">Programmes</a>
+          <a href="impact.html">Impact</a>
+          <a href="stories-insights.html">Stories &amp; Insights</a>
+          <a href="campaigns-events.html">Campaigns &amp; Events</a>
         </div>
-        <a class="mega-feature" href="impact.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/hiv-outreach.jpg')">
-          <span class="mega-feature-tag">Our impact</span>
-          <span class="mega-feature-title">See the change</span>
+        <a class="mega-feature" href="impact.html">
+          <img src="assets/images/hiv-outreach.jpg" alt="HIV prevention outreach in the community" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Our impact</span>
+            <span class="mega-feature-title">See the change</span>
+          </span>
         </a>
       </div>
     </li>
     <li class="has-mega mega-right">
-      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="ways-to-give.html">Ways to Give</a>
-        <a href="ways-to-give.html#volunteer">Volunteer</a>
-        <a href="corporate-partnerships.html">Corporate Partnerships</a>
+          <a href="ways-to-give.html">Ways to Give</a>
+          <a href="ways-to-give.html#volunteer">Volunteer</a>
+          <a href="corporate-partnerships.html">Corporate Partnerships</a>
+          <a href="safeguarding.html">Safeguarding</a>
         </div>
-        <a class="mega-feature" href="ways-to-give.html#volunteer" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/ascender.jpg')">
-          <span class="mega-feature-tag">Lend a hand</span>
-          <span class="mega-feature-title">Volunteer with us</span>
+        <a class="mega-feature" href="ways-to-give.html#volunteer">
+          <img src="assets/images/ascender.jpg" alt="An Ascend Futures community ambassador" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Lend a hand</span>
+            <span class="mega-feature-title">Volunteer with us</span>
+          </span>
         </a>
       </div>
     </li>
-    <li><a href="contact.html" class="nav-top nav-contact">Contact</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
+  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -121,8 +132,10 @@
     <p class="section-sub">The Executive Director leads organisational and operational management, supported by finance and administration, technical advisory, programmes, monitoring &amp; evaluation, communications and advocacy, and IT functions.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:clamp(14px,2.5vw,22px);max-width:1080px;margin:0 auto">
-    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><h3 style="margin-bottom:8px">Executive Director</h3><p style="color:var(--muted)">Leads organisational leadership and operational management, supported by a Technical Advisor across thematic areas.</p></div>
-    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 style="margin-bottom:8px">Business Development &amp; Partnerships</h3><p style="color:var(--muted)">Resource mobilisation, partnerships, proposal coordination, and donor relations.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><h3 style="margin-bottom:8px">Executive Director</h3><p style="color:var(--muted)">Leads organisational leadership and operational management, supported by Technical Advisors across thematic areas.</p></div>
+    
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></div><h3 style="margin-bottom:8px">Technical Advisors</h3><p style="color:var(--muted)">Technical Advisors provide specialised expertise and strategic guidance to strengthen the quality, relevance, evidence base, and impact of AFF&rsquo;s programmes. They support programme design, technical standards, capacity strengthening, research and learning, monitoring and evaluation, and policy advocacy across our priority areas.</p></div>
+<div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 style="margin-bottom:8px">Business Development &amp; Partnerships</h3><p style="color:var(--muted)">Resource mobilisation, partnerships, proposal coordination, and donor relations.</p></div>
     <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></div><h3 style="margin-bottom:8px">Finance &amp; Administration</h3><p style="color:var(--muted)">Financial management, administration, human resources, IT, and operational systems — led by the Finance &amp; Administration Director.</p></div>
     <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></div><h3 style="margin-bottom:8px">Programmes</h3><p style="color:var(--muted)">Programme design, implementation, technical quality, and learning — including Program Officers and the Communications &amp; Advocacy Officer.</p></div>
     <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg></div><h3 style="margin-bottom:8px">Monitoring &amp; Evaluation</h3><p style="color:var(--muted)">MEAL systems, research, and evidence generation — including M&amp;E Officers and Researchers.</p></div>
@@ -148,10 +161,14 @@
       <p class="foot-desc">"Building Dreams, Transforming Communities." A Zambian youth-focused and woman-led non-profit advancing equitable health, gender justice, and youth leadership.<br><br>Stand No 287/15, Chipata Compound, along Highland Road, Lusaka<br>info@ascendfuturesfoundation.org<br>+260 770 983 978</p>
       <div class="footer-newsletter">
         <span class="newsletter-label">Get Updates</span>
-        <div class="newsletter-input-group">
-          <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
-          <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
-        </div>
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return subscribeNewsletter(event)">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p hidden aria-hidden="true"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="newsletter-input-group">
+            <input type="email" name="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </div>
+        </form>
         <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
       </div>
       <div class="socials">
@@ -198,6 +215,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=6"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>

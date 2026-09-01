@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=6">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
     <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
-      <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
+      <a href="initiatives.html" onclick="closeMobile()">Programmes</a>
       <a href="impact.html" onclick="closeMobile()">Impact</a>
       <a href="stories-insights.html" onclick="closeMobile()">Stories &amp; Insights</a>
       <a href="campaigns-events.html" onclick="closeMobile()">Campaigns &amp; Events</a>
@@ -41,67 +41,78 @@
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
+      <a href="safeguarding.html" onclick="closeMobile()">Safeguarding</a>
     </div>
   </div>
   <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
-<nav id="mainNav">
+<nav id="mainNav" aria-label="Main">
   <a href="index.html" class="logo" aria-label="Ascend Futures Foundation home">
-    <img class="logo-full" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation" style="height:clamp(48px,8vw,66px);width:auto">
+    <img class="logo-full" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation">
   </a>
   <ul class="nav-links">
     <li class="has-mega">
-      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="about.html">Overview</a>
-        <a href="staff.html">Staff</a>
-        <a href="board.html">Board</a>
-        <a href="financials.html">Financials</a>
-        <a href="press.html">Press</a>
-        <a href="careers.html">Careers</a>
+          <a href="about.html">Overview</a>
+          <a href="staff.html">Staff</a>
+          <a href="board.html">Board</a>
+          <a href="financials.html">Financials</a>
+          <a href="press.html">Press</a>
+          <a href="careers.html">Careers</a>
         </div>
-        <a class="mega-feature" href="about.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/community-engagement.jpg')">
-          <span class="mega-feature-tag">Who we are</span>
-          <span class="mega-feature-title">Rise together</span>
+        <a class="mega-feature" href="about.html">
+          <img src="assets/images/community-engagement.jpg" alt="AFF team member with a community member" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Who we are</span>
+            <span class="mega-feature-title">Rise together</span>
+          </span>
         </a>
       </div>
     </li>
     <li class="has-mega">
-      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="our-work.html">Our Work</a>
-        <a href="initiatives.html">Initiatives</a>
-        <a href="impact.html">Impact</a>
-        <a href="stories-insights.html">Stories &amp; Insights</a>
-        <a href="campaigns-events.html">Campaigns &amp; Events</a>
+          <a href="our-work.html">Our Work</a>
+          <a href="initiatives.html">Programmes</a>
+          <a href="impact.html">Impact</a>
+          <a href="stories-insights.html">Stories &amp; Insights</a>
+          <a href="campaigns-events.html">Campaigns &amp; Events</a>
         </div>
-        <a class="mega-feature" href="impact.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/hiv-outreach.jpg')">
-          <span class="mega-feature-tag">Our impact</span>
-          <span class="mega-feature-title">See the change</span>
+        <a class="mega-feature" href="impact.html">
+          <img src="assets/images/hiv-outreach.jpg" alt="HIV prevention outreach in the community" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Our impact</span>
+            <span class="mega-feature-title">See the change</span>
+          </span>
         </a>
       </div>
     </li>
     <li class="has-mega mega-right">
-      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="ways-to-give.html">Ways to Give</a>
-        <a href="ways-to-give.html#volunteer">Volunteer</a>
-        <a href="corporate-partnerships.html">Corporate Partnerships</a>
+          <a href="ways-to-give.html">Ways to Give</a>
+          <a href="ways-to-give.html#volunteer">Volunteer</a>
+          <a href="corporate-partnerships.html">Corporate Partnerships</a>
+          <a href="safeguarding.html">Safeguarding</a>
         </div>
-        <a class="mega-feature" href="ways-to-give.html#volunteer" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/ascender.jpg')">
-          <span class="mega-feature-tag">Lend a hand</span>
-          <span class="mega-feature-title">Volunteer with us</span>
+        <a class="mega-feature" href="ways-to-give.html#volunteer">
+          <img src="assets/images/ascender.jpg" alt="An Ascend Futures community ambassador" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Lend a hand</span>
+            <span class="mega-feature-title">Volunteer with us</span>
+          </span>
         </a>
       </div>
     </li>
-    <li><a href="contact.html" class="nav-top nav-contact">Contact</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
+  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -119,23 +130,24 @@
     <span class="section-tag">Core Priorities — Where We Lead</span>
     <h2 class="section-h2">Our flagship <em>pillars</em></h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,3vw,26px);max-width:1000px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,3vw,26px);max-width:1080px;margin:0 auto">
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+      <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
       <h3>SRHR &amp; HIV Prevention</h3>
-      <p style="color:var(--muted);margin-bottom:10px">Our flagship pillar: prevention literacy, demand generation, and access to youth-friendly, rights-based, choice-based services. Interventions span the full HIV prevention menu and the broader SRHR agenda:</p>
-      <ul style="color:var(--muted);padding-left:18px;line-height:1.7;font-size:var(--fs-sm)">
-        <li>Biomedical prevention literacy across oral PrEP, long-acting injectable Cabotegravir, the Dapivirine Vaginal Ring, Lenacapavir and other emerging options, PEP, and HIV testing services</li>
-        <li>Peer-led community demand generation, including digital SRHR &amp; HIV prevention campaigns tailored to young people's realities</li>
-        <li>School and community-based life skills and comprehensive sexuality education</li>
+      <p style="color:var(--muted);margin-bottom:12px">Our flagship pillar: prevention literacy, demand generation, and access to youth-friendly, rights-based, choice-based services. Our interventions span the full HIV prevention menu and the broader SRHR agenda:</p>
+      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
+        <li>Biomedical HIV prevention product literacy — oral PrEP, long-acting injectable Cabotegravir, Lenacapavir, the PrEP Ring, post-exposure prophylaxis (PEP), and HIV testing</li>
+        <li>Peer-led community demand generation, including digital SRHR and HIV prevention campaigns tailored to young people's realities</li>
+        <li>School and community-based Life Skills and Health Education (LSHE)</li>
         <li>Community referral systems, service linkage, and capacity strengthening for healthcare workers and peer educators</li>
       </ul>
+      <p style="color:var(--muted);font-size:var(--fs-sm);margin-top:14px"><strong style="color:var(--ink)">The biomedical interventions include:</strong> HIV testing services · condom use · voluntary medical male circumcision · prevention of mother-to-child transmission · STI screening and treatment · post-exposure prophylaxis (PEP) · treatment as prevention (U=U) · needle and syringe programmes · medication-assisted treatment and clean injection equipment · pre-exposure prophylaxis (PrEP).</p>
     </div>
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
+      <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
       <h3>Community Advocacy &amp; Systems Accountability</h3>
-      <p style="color:var(--muted);margin-bottom:10px">We implement, and we influence the systems around implementation — making systems more accountable and communities more able to hold them to account:</p>
-      <ul style="color:var(--muted);padding-left:18px;line-height:1.7;font-size:var(--fs-sm)">
+      <p style="color:var(--muted);margin-bottom:12px">We implement solutions and influence the systems that shape their delivery — making systems more accountable and empowering communities to hold them to account through:</p>
+      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
         <li>Community-led monitoring and accountability mechanisms</li>
         <li>Youth advocacy and leadership development</li>
         <li>Multi-stakeholder accountability dialogues, including on domestic resource mobilisation</li>
@@ -151,16 +163,31 @@
     <span class="section-tag">Strategic Growth Priorities — Where We Build</span>
     <h2 class="section-h2">Phased, evidence-led <em>expansion</em></h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,3vw,26px);max-width:1000px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,3vw,26px);max-width:1080px;margin:0 auto">
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+      <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
       <h3>Climate &amp; Health Intersection</h3>
-      <p style="color:var(--muted)">Climate change is reshaping community health, livelihoods, and vulnerability. Over this strategic period we are deliberately building capability at the climate-health intersection through institutional learning, a climate-health integration framework, evidence products and policy briefs, climate-sensitive community health approaches, and cross-sector partnerships — a phased, evidence-led approach rather than overstating current readiness.</p>
+      <p style="color:var(--muted);margin-bottom:12px">AFF advances climate and health resilience by promoting sustainable healthcare practices, strengthening community preparedness, supporting climate-informed health advocacy, and empowering young people and women to lead locally relevant climate solutions. Key contributions include:</p>
+      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
+        <li>Climate-resilient health systems</li>
+        <li>Sustainable and low-carbon healthcare</li>
+        <li>Climate, gender, and health equity</li>
+        <li>Youth leadership and community climate action</li>
+      </ul>
     </div>
     <div class="way-card reveal">
-      <div class="ic-icon" style="width:52px;height:52px;font-size:1.6rem;margin-bottom:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-      <h3>Mental Health &amp; Psychosocial Wellbeing</h3>
-      <p style="color:var(--muted)">Mental health and psychosocial needs are rising among adolescents, young people, and caregivers — particularly within HIV, SRHR, and social vulnerability contexts. We are building foundational capacity through integration of psychosocial support into community health work, stigma reduction, youth resilience interventions, peer support, and partnerships with specialised institutions, ahead of larger-scale expansion.</p>
+      <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Child Protection &amp; Gender Justice</h3>
+      <p style="color:var(--muted);margin-bottom:12px">AFF works to prevent and address sexual and gender-based violence through gender-transformative approaches, survivor-centred health and support services, youth and women's leadership, and strengthened policies, systems, and community-led accountability mechanisms:</p>
+      <ul style="color:var(--muted);padding-left:18px;line-height:1.75;font-size:var(--fs-sm)">
+        <li>Prevent and respond to sexual and gender-based violence (SGBV)</li>
+        <li>Promote women's and girls' rights and bodily autonomy</li>
+        <li>Strengthen young women's and girls' leadership and meaningful participation</li>
+        <li>Challenge harmful gender norms and practices such as child marriage and teenage pregnancy</li>
+        <li>Improve equitable access to health information and services centred on women and girls</li>
+        <li>Engage men and boys as partners in transforming harmful norms</li>
+        <li>Advocate for policies and institutions that advance gender equality and accountability</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -171,21 +198,22 @@
     <h2 class="section-h2">Research, Innovation &amp; <em>Community Engagement</em></h2>
     <p class="section-sub">These run underneath everything we do — strengthening evidence generation, adaptive implementation, policy influence, and community ownership rather than sitting as standalone programmes.</p>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(14px,2.5vw,22px);max-width:1000px;margin:0 auto">
-    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div><h3 style="margin-bottom:8px">Digital Innovation</h3><p style="color:var(--muted)">Digital health information dissemination, mobile outreach and referral systems, community digital literacy, and technology-enabled peer support.</p></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(14px,2.5vw,22px);max-width:1080px;margin:0 auto">
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div><h3 style="margin-bottom:8px">Digital Innovation</h3><p style="color:var(--muted)">We strengthen the use of digital platforms for health information dissemination, mobile outreach and referral systems, community digital literacy, and technology-enabled peer support across all available interventions.</p></div>
     <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg></div><h3 style="margin-bottom:8px">MEAL &amp; Adaptive Learning</h3><p style="color:var(--muted)">Routine monitoring, operational research, rapid assessments, learning platforms, and data utilisation for adaptive, evidence-informed programming.</p></div>
     <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3 style="margin-bottom:8px">Community Participation</h3><p style="color:var(--muted)">Peer-led and community-led approaches, participatory planning and feedback, youth co-creation models, and community ownership mechanisms.</p></div>
   </div>
 </section>
 
 <section class="section" style="text-align:center">
-  <div style="max-width:680px;margin:0 auto">
+  <div style="max-width:720px;margin:0 auto">
+    <div class="ic-icon" style="margin:0 auto 14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
     <span class="section-tag">Where We Work</span>
     <h2 class="section-h2">12 districts across <em>7 provinces</em></h2>
-    <p style="color:var(--muted);line-height:1.8">We are based in Lusaka and currently implement programmes in 12 districts across 7 provinces of Zambia — working with 23 health facilities and with rural and peri-urban communities affected by poverty, stigma, and gender inequality.</p>
+    <p style="color:var(--muted);line-height:1.8">Our secretariat office is in Lusaka, while we implement programmes in 12 districts across 7 provinces of Zambia — working with 25 health facilities within rural and peri-urban communities affected by poverty, stigma, gender inequality, and barriers to equitable health service access.</p>
     <div style="margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="initiatives.html" class="btn-primary">See Our Initiatives</a>
-      <a href="impact.html" class="btn-ghost">Our Contributions &amp; Targets</a>
+      <a href="initiatives.html" class="btn-primary">See Our Programmes</a>
+      <a href="impact.html" class="btn-ghost">Our Impact</a>
     </div>
   </div>
 </section>
@@ -198,10 +226,14 @@
       <p class="foot-desc">"Building Dreams, Transforming Communities." A Zambian youth-focused and woman-led non-profit advancing equitable health, gender justice, and youth leadership.<br><br>Stand No 287/15, Chipata Compound, along Highland Road, Lusaka<br>info@ascendfuturesfoundation.org<br>+260 770 983 978</p>
       <div class="footer-newsletter">
         <span class="newsletter-label">Get Updates</span>
-        <div class="newsletter-input-group">
-          <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
-          <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
-        </div>
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return subscribeNewsletter(event)">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p hidden aria-hidden="true"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="newsletter-input-group">
+            <input type="email" name="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </div>
+        </form>
         <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
       </div>
       <div class="socials">
@@ -248,6 +280,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=6"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>

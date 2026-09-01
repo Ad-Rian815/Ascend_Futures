@@ -2360,3 +2360,256 @@ footer { border-top: 1px solid var(--border); }
   font-weight: 700;
   border-bottom: none;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   REDESIGN LAYER — floating "island" nav, photo hero, premium polish
+   (appended last so it takes precedence)
+══════════════════════════════════════════════════════════════ */
+
+/* ─────────── 1. FLOATING ISLAND NAV ─────────── */
+nav#mainNav {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: min(1180px, calc(100vw - 24px));
+  padding: 8px 10px 8px 16px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.72);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  backdrop-filter: blur(20px) saturate(170%);
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 10px 34px rgba(16,44,28,.13), 0 2px 8px rgba(16,44,28,.06);
+  transition: background .35s ease, box-shadow .35s ease, padding .35s ease, border-radius .35s ease;
+  gap: 12px;
+}
+nav#mainNav.scrolled {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 12px 40px rgba(16,44,28,.18), 0 2px 8px rgba(16,44,28,.08);
+  padding-top: 6px; padding-bottom: 6px;
+}
+nav#mainNav .logo { flex-shrink: 0; }
+nav#mainNav .logo .logo-full { height: clamp(36px, 4.6vw, 46px); }
+nav#mainNav .nav-links { gap: 2px; align-items: center; }
+
+.nav-top, .nav-contact {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: var(--fs-sm); font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease;
+}
+.nav-top:hover, .nav-contact:hover,
+.has-mega:focus-within .nav-top { background: rgba(20,55,33,.07); color: var(--gold-ink); }
+.nav-contact {
+  background: var(--gold); color: var(--green-deep); font-weight: 700;
+  margin-left: 6px; padding: 10px 20px;
+}
+.nav-contact:hover { background: var(--gold-light); color: var(--green-deep); }
+
+/* ─────────── 2. MEGA DROPDOWNS (rebuilt: cannot overflow) ─────────── */
+.mega {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0; right: auto;
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: minmax(190px, max-content) 176px;
+  gap: 10px;
+  width: max-content;
+  min-width: 0;
+  max-width: min(520px, calc(100vw - 28px));
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.92);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  backdrop-filter: blur(22px) saturate(170%);
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: 0 22px 54px rgba(16,44,28,.2), 0 4px 12px rgba(16,44,28,.08);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform: translateY(6px) scale(.985);
+  transform-origin: top left;
+  transition: opacity .24s cubic-bezier(.2,.7,.2,1), transform .24s cubic-bezier(.2,.7,.2,1), visibility .24s;
+  z-index: 210;
+}
+/* the right-most panel opens leftward so it always stays on screen */
+.nav-links .has-mega.mega-right .mega { left: auto; right: 0; transform-origin: top right; }
+.has-mega:hover > .mega,
+.has-mega:focus-within > .mega {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+/* hover bridge so the panel doesn't close in the gap */
+.has-mega::after { content:''; position:absolute; left:0; right:0; top:100%; height:16px; }
+
+.mega-links { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.mega-links a {
+  padding: 11px 14px; border-radius: 12px;
+  font-size: var(--fs-sm); font-weight: 500; color: var(--ink);
+  white-space: nowrap;
+  transition: background .16s ease, color .16s ease;
+}
+.mega-links a:hover { background: rgba(20,55,33,.07); color: var(--gold-ink); }
+
+.mega-feature {
+  position: relative; display: block;
+  border-radius: 14px; overflow: hidden;
+  min-height: 190px;
+  background: var(--green-deep);
+  transition: transform .3s cubic-bezier(.2,.7,.2,1);
+}
+.mega-feature img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.mega-feature::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(13,43,26,0) 30%, rgba(13,43,26,.86) 100%);
+}
+.mega-feature:hover img { transform: scale(1.06); }
+.mega-feature-body {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  z-index: 2; display: flex; flex-direction: column; gap: 2px;
+  padding: 14px;
+}
+.mega-feature-tag {
+  font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .09em;
+  color: var(--gold-light); font-weight: 700;
+}
+.mega-feature-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.35rem;
+  font-weight: 700; line-height: 1.06; color: #fff;
+}
+/* tighter screens: drop the photo, panel shrinks to fit the links */
+@media (max-width: 1120px) {
+  .mega { grid-template-columns: 1fr; max-width: min(300px, calc(100vw - 28px)); }
+  .mega-feature { display: none; }
+}
+@media (max-width: 900px) {
+  nav#mainNav .nav-links { display: none; }
+  nav#mainNav .hamburger { display: flex; }
+}
+
+/* ─────────── 3. MOBILE MENU (premium sheet) ─────────── */
+.mobile-menu {
+  padding: calc(96px + env(safe-area-inset-top)) clamp(18px,5vw,28px) 48px;
+  background: rgba(250,252,249,.96);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+}
+.mobile-submenu-item, .mobile-menu > a { border-bottom: 1px solid rgba(20,60,36,.10); }
+.mobile-submenu-btn { padding: 18px 4px; font-size: 1.1rem; }
+.mobile-submenu a { font-size: 1rem; padding: 13px 0 13px 16px; }
+.mobile-menu .mobile-contact {
+  margin-top: 26px; border-radius: 999px; padding: 16px;
+  box-shadow: 0 8px 22px rgba(252,156,0,.3);
+}
+.hamburger {
+  width: 44px; height: 44px; border-radius: 999px;
+  align-items: center; justify-content: center;
+  background: rgba(20,55,33,.06);
+  flex-shrink: 0;
+}
+.hamburger span { width: 18px; }
+
+/* ─────────── 4. HERO WITH TEAM PHOTO ─────────── */
+.hero.hero-photo {
+  display: block;
+  min-height: 100svh;
+  padding: 0;
+  position: relative;
+  isolation: isolate;
+}
+.hero-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 28%;
+}
+/* seamless scrim: keeps text and icons legible, blends into the page below */
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(9,32,19,.62) 0%, rgba(9,32,19,.42) 32%, rgba(9,32,19,.72) 72%, var(--bg) 100%),
+    linear-gradient(100deg, rgba(9,32,19,.72) 0%, rgba(9,32,19,.30) 55%, rgba(9,32,19,.15) 100%);
+}
+.hero.hero-photo .hero-content {
+  position: relative; z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: calc(150px + env(safe-area-inset-top)) clamp(20px,5vw,64px) clamp(60px,9vw,110px);
+  display: flex; flex-direction: column; align-items: flex-start;
+  min-height: 100svh; justify-content: center;
+}
+.hero.hero-photo .hero-pill {
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.32);
+  color: #fff;
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.hero.hero-photo h1 { color: #fff; max-width: 15ch; text-shadow: 0 2px 24px rgba(6,24,14,.4); }
+.hero.hero-photo h1 em { color: var(--gold-light); font-style: italic; }
+.hero.hero-photo .hero-sub {
+  color: rgba(255,255,255,.92); max-width: 56ch;
+  text-shadow: 0 1px 16px rgba(6,24,14,.45);
+}
+.hero.hero-photo .btn-ghost {
+  color: #fff; border-color: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.1);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.hero.hero-photo .btn-ghost:hover { background: rgba(255,255,255,.2); border-color: #fff; color: #fff; }
+
+/* glass stat cards over the photo */
+.hero.hero-photo .hero-stats {
+  display: grid; gap: clamp(10px,1.6vw,16px);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  width: 100%; max-width: 780px;
+  margin-top: clamp(26px,4vw,44px);
+  border: none; padding: 0;
+}
+.hero.hero-photo .hero-stats > div {
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.26);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+  border-radius: 16px;
+  padding: clamp(14px,2.2vw,20px);
+  transition: transform .3s ease, background .3s ease;
+}
+.hero.hero-photo .hero-stats > div:hover { transform: translateY(-3px); background: rgba(255,255,255,.2); }
+.hero.hero-photo .stat-val { color: #fff; }
+.hero.hero-photo .stat-lbl { color: rgba(255,255,255,.82); }
+.hero-scroll-cue {
+  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+  z-index: 2; color: rgba(255,255,255,.7);
+  animation: cueBob 2.4s ease-in-out infinite;
+}
+@keyframes cueBob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(7px)} }
+
+/* ─────────── 5. PREMIUM POLISH ─────────── */
+.info-card, .way-card, .story-card, .event-card, .cause-card {
+  border-radius: 20px;
+  transition: transform .38s cubic-bezier(.2,.7,.2,1), box-shadow .38s ease, border-color .38s ease;
+}
+.info-card:hover, .way-card:hover, .story-card:hover, .event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 46px rgba(16,44,28,.13);
+  border-color: var(--border-gold);
+}
+.btn-primary, .btn-ghost {
+  border-radius: 999px;
+  transition: transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease, background .25s ease;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(252,156,0,.34); }
+.page-hero { padding-top: clamp(140px, 17vw, 190px); }
+:focus-visible { outline: 2px solid var(--gold-ink); outline-offset: 3px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-cue { animation: none; }
+  .mega, .info-card, .way-card, .btn-primary { transition: none; }
+}

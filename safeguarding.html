@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Safeguarding Policy — Ascend Futures</title>
+<title>Safeguarding — Ascend Futures Foundation</title>
 <meta name="description" content="Ascend Futures' commitment to safeguarding vulnerable populations and maintaining ethical standards in all operations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=6">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
     <button onclick="toggleMobileSubmenu(this)" class="mobile-submenu-btn"><span>Our Work</span> <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="mobile-submenu">
       <a href="our-work.html" onclick="closeMobile()">Our Work</a>
-      <a href="initiatives.html" onclick="closeMobile()">Initiatives</a>
+      <a href="initiatives.html" onclick="closeMobile()">Programmes</a>
       <a href="impact.html" onclick="closeMobile()">Impact</a>
       <a href="stories-insights.html" onclick="closeMobile()">Stories &amp; Insights</a>
       <a href="campaigns-events.html" onclick="closeMobile()">Campaigns &amp; Events</a>
@@ -41,268 +41,150 @@
       <a href="ways-to-give.html" onclick="closeMobile()">Ways to Give</a>
       <a href="ways-to-give.html#volunteer" onclick="closeMobile()">Volunteer</a>
       <a href="corporate-partnerships.html" onclick="closeMobile()">Corporate Partnerships</a>
+      <a href="safeguarding.html" onclick="closeMobile()">Safeguarding</a>
     </div>
   </div>
   <a href="contact.html" class="mobile-contact" onclick="closeMobile()">Contact Us</a>
 </div>
 
 <!-- ══ NAV ══ -->
-<nav id="mainNav">
+<nav id="mainNav" aria-label="Main">
   <a href="index.html" class="logo" aria-label="Ascend Futures Foundation home">
-    <img class="logo-full" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation" style="height:clamp(48px,8vw,66px);width:auto">
+    <img class="logo-full" src="assets/images/aff-logo.png" alt="Ascend Futures Foundation">
   </a>
   <ul class="nav-links">
     <li class="has-mega">
-      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="about.html" class="nav-top">About Us <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="about.html">Overview</a>
-        <a href="staff.html">Staff</a>
-        <a href="board.html">Board</a>
-        <a href="financials.html">Financials</a>
-        <a href="press.html">Press</a>
-        <a href="careers.html">Careers</a>
+          <a href="about.html">Overview</a>
+          <a href="staff.html">Staff</a>
+          <a href="board.html">Board</a>
+          <a href="financials.html">Financials</a>
+          <a href="press.html">Press</a>
+          <a href="careers.html">Careers</a>
         </div>
-        <a class="mega-feature" href="about.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/community-engagement.jpg')">
-          <span class="mega-feature-tag">Who we are</span>
-          <span class="mega-feature-title">Rise together</span>
+        <a class="mega-feature" href="about.html">
+          <img src="assets/images/community-engagement.jpg" alt="AFF team member with a community member" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Who we are</span>
+            <span class="mega-feature-title">Rise together</span>
+          </span>
         </a>
       </div>
     </li>
     <li class="has-mega">
-      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="our-work.html" class="nav-top">Our Work <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="our-work.html">Our Work</a>
-        <a href="initiatives.html">Initiatives</a>
-        <a href="impact.html">Impact</a>
-        <a href="stories-insights.html">Stories &amp; Insights</a>
-        <a href="campaigns-events.html">Campaigns &amp; Events</a>
+          <a href="our-work.html">Our Work</a>
+          <a href="initiatives.html">Programmes</a>
+          <a href="impact.html">Impact</a>
+          <a href="stories-insights.html">Stories &amp; Insights</a>
+          <a href="campaigns-events.html">Campaigns &amp; Events</a>
         </div>
-        <a class="mega-feature" href="impact.html" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/hiv-outreach.jpg')">
-          <span class="mega-feature-tag">Our impact</span>
-          <span class="mega-feature-title">See the change</span>
+        <a class="mega-feature" href="impact.html">
+          <img src="assets/images/hiv-outreach.jpg" alt="HIV prevention outreach in the community" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Our impact</span>
+            <span class="mega-feature-title">See the change</span>
+          </span>
         </a>
       </div>
     </li>
     <li class="has-mega mega-right">
-      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="ways-to-give.html" class="nav-top">Get Involved <svg class="nav-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="11" height="11" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="mega">
         <div class="mega-links">
-        <a href="ways-to-give.html">Ways to Give</a>
-        <a href="ways-to-give.html#volunteer">Volunteer</a>
-        <a href="corporate-partnerships.html">Corporate Partnerships</a>
+          <a href="ways-to-give.html">Ways to Give</a>
+          <a href="ways-to-give.html#volunteer">Volunteer</a>
+          <a href="corporate-partnerships.html">Corporate Partnerships</a>
+          <a href="safeguarding.html">Safeguarding</a>
         </div>
-        <a class="mega-feature" href="ways-to-give.html#volunteer" style="background-image:linear-gradient(180deg,rgba(13,43,26,0) 35%,rgba(13,43,26,.82) 100%),url('assets/images/ascender.jpg')">
-          <span class="mega-feature-tag">Lend a hand</span>
-          <span class="mega-feature-title">Volunteer with us</span>
+        <a class="mega-feature" href="ways-to-give.html#volunteer">
+          <img src="assets/images/ascender.jpg" alt="An Ascend Futures community ambassador" loading="lazy">
+          <span class="mega-feature-body">
+            <span class="mega-feature-tag">Lend a hand</span>
+            <span class="mega-feature-title">Volunteer with us</span>
+          </span>
         </a>
       </div>
     </li>
-    <li><a href="contact.html" class="nav-top nav-contact">Contact</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
+  <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- ══ PAGE HERO ══ -->
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="contact.html">Support</a><span>/</span>Safeguarding</div>
-    <h1>Safeguarding <em>Our Communities</em></h1>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Safeguarding</div>
+    <h1>Safeguarding Our <em>Communities</em></h1>
     <p>AFF has implemented child safeguarding initiatives through school and community platforms to promote safer environments and strengthen the protection and wellbeing of children and adolescents.</p>
   </div>
 </section>
 
-<!-- ══ SAFEGUARDING COMMITMENT ══ -->
 <section class="section">
-  <div class="reveal" style="background: linear-gradient(135deg, rgba(42, 122, 75, 0.1) 0%, rgba(232, 146, 42, 0.05) 100%); border-radius: var(--radius-lg); padding: var(--space-lg); border-left: 4px solid var(--green-vivid);">
-    <h2 style="margin-bottom: var(--space-lg);">Our Safeguarding <em>Commitment</em></h2>
-    <p style="margin-bottom: var(--space-md); font-size: var(--fs-lg);">Safeguarding is a core organizational value. We are uncompromising in our commitment to protecting the rights, dignity, and safety of all people—particularly children, women, and vulnerable populations—across all our operations globally.</p>
-    <p style="color: var(--muted);">This commitment is embedded in our policies, culture, systems, and accountability structures. Every team member, partner, and stakeholder shares responsibility for safeguarding.</p>
+  <div style="max-width:780px;margin:0 auto;text-align:center">
+    <span class="section-tag">Our Commitment</span>
+    <h2 class="section-h2">Safeguarding is a <em>core organisational value</em></h2>
+    <p style="color:var(--muted);line-height:1.8;margin-bottom:14px">We are uncompromising in our commitment to protecting the rights, dignity, and safety of all people — particularly children, women, and vulnerable populations — across all our operations.</p>
+    <p style="color:var(--muted);line-height:1.8">This commitment is embedded in our policies, culture, systems, and accountability structures. Every team member, partner, and stakeholder shares responsibility for safeguarding.</p>
   </div>
 </section>
 
-<!-- ══ CORE PRINCIPLES ══ -->
-<section class="section" style="background: var(--bg-alt); margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding: var(--space-lg) calc(50vw - 50%);">
-  <div style="max-width: 1000px; margin: 0 auto;">
-    <h2 style="text-align: center; margin-bottom: var(--space-lg);">Core Safeguarding <em>Principles</em></h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
-      <div class="reveal" style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-        <div style="font-size: 28px; margin-bottom: var(--space-md);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="30" height="30" aria-hidden="true" style="color:var(--gold-ink)"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3 style="margin-bottom: var(--space-sm);">Transparency</h3>
-        <p style="color: var(--muted);">We operate with complete transparency in all safeguarding matters. Clear policies, open reporting channels, and public accountability standards define our approach.</p>
-      </div>
-
-      <div class="reveal" style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-        <div style="font-size: 28px; margin-bottom: var(--space-md);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="30" height="30" aria-hidden="true" style="color:var(--gold-ink)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3 style="margin-bottom: var(--space-sm);">Protection</h3>
-        <p style="color: var(--muted);">We prioritize the safety of vulnerable populations above all else. Robust protocols, prevention measures, and victim support systems are in place.</p>
-      </div>
-
-      <div class="reveal" style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-        <div style="font-size: 28px; margin-bottom: var(--space-md);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="30" height="30" aria-hidden="true" style="color:var(--gold-ink)"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
-        <h3 style="margin-bottom: var(--space-sm);">Accountability</h3>
-        <p style="color: var(--muted);">We hold ourselves and all partners accountable to the highest standards. Violations are investigated thoroughly and addressed decisively.</p>
-      </div>
-
-      <div class="reveal" style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-        <div style="font-size: 28px; margin-bottom: var(--space-md);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="30" height="30" aria-hidden="true" style="color:var(--gold-ink)"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3 style="margin-bottom: var(--space-sm);">Partnership</h3>
-        <p style="color: var(--muted);">We work with communities and local partners who share our safeguarding values. Collective responsibility drives our collective impact.</p>
-      </div>
-
-      <div class="reveal" style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-        <div style="font-size: 28px; margin-bottom: var(--space-md);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="30" height="30" aria-hidden="true" style="color:var(--gold-ink)"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3 style="margin-bottom: var(--space-sm);">Voice & Agency</h3>
-        <p style="color: var(--muted);">We amplify the voices of those we serve. Communities lead safeguarding conversations and decisions affecting them.</p>
-      </div>
-
-      <div class="reveal" style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-        <div style="font-size: 28px; margin-bottom: var(--space-md);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="30" height="30" aria-hidden="true" style="color:var(--gold-ink)"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg></div>
-        <h3 style="margin-bottom: var(--space-sm);">Continuous Learning</h3>
-        <p style="color: var(--muted);">We continuously train staff, update policies, and learn from incidents. Safeguarding excellence requires ongoing commitment.</p>
-      </div>
-    </div>
+<section class="section" style="background:var(--bg-alt);margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);padding:var(--space-lg) calc(50vw - 50%)">
+  <div style="text-align:center;max-width:660px;margin:0 auto clamp(28px,5vw,44px)">
+    <span class="section-tag">Core Principles</span>
+    <h2 class="section-h2">What guides <em>our approach</em></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:clamp(14px,2.5vw,22px);max-width:1080px;margin:0 auto">
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3 style="margin-bottom:8px">Transparency</h3><p style="color:var(--muted)">We operate with complete transparency in all safeguarding matters. Clear policies, open reporting channels, and public accountability standards define our approach.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 style="margin-bottom:8px">Protection</h3><p style="color:var(--muted)">We prioritise the safety of vulnerable populations above all else. Robust protocols, prevention measures, and survivor support systems are in place.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><h3 style="margin-bottom:8px">Accountability</h3><p style="color:var(--muted)">We hold ourselves and all partners to the highest standards. Violations are investigated thoroughly and addressed decisively.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 style="margin-bottom:8px">Partnership</h3><p style="color:var(--muted)">We work with communities and local partners who share our safeguarding values. Collective responsibility drives our collective impact.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div><h3 style="margin-bottom:8px">Voice &amp; Agency</h3><p style="color:var(--muted)">We amplify the voices of those we serve. Communities lead safeguarding conversations and the decisions affecting them.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3 style="margin-bottom:8px">Continuous Learning</h3><p style="color:var(--muted)">We continuously train staff, update policies, and learn from incidents. Safeguarding excellence requires ongoing commitment.</p></div>
   </div>
 </section>
 
-<!-- ══ KEY POLICIES ══ -->
 <section class="section">
-  <h2 style="text-align: center; margin-bottom: var(--space-lg);">Our Safeguarding <em>Framework</em></h2>
-  
-  <div style="max-width: 900px; margin: 0 auto;">
-    <div class="reveal" style="margin-bottom: var(--space-lg); padding: var(--space-lg); background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-      <h3 style="margin-bottom: var(--space-sm);">Child Protection Policy</h3>
-      <p style="color: var(--muted); margin-bottom: var(--space-md);">Comprehensive policies protecting children from abuse, exploitation, and neglect. All staff undergo vetting, training, and annual certification. Programs are designed with child protection at the center.</p>
-      <div style="background: var(--bg-alt); padding: var(--space-md); border-radius: var(--radius-md); font-size: var(--fs-sm); color: var(--muted);">
-        <strong>Key components:</strong> Screening processes • Code of conduct • Incident reporting • Support services • Community engagement
-      </div>
-    </div>
-
-    <div class="reveal" style="margin-bottom: var(--space-lg); padding: var(--space-lg); background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-      <h3 style="margin-bottom: var(--space-sm);">Prevention of Sexual Abuse & Harassment (PSEA)</h3>
-      <p style="color: var(--muted); margin-bottom: var(--space-md);">Zero tolerance for sexual abuse, harassment, or exploitation. Prevention training for all staff. Safe reporting mechanisms for survivors. Victim-centered support and accountability measures.</p>
-      <div style="background: var(--bg-alt); padding: var(--space-md); border-radius: var(--radius-md); font-size: var(--fs-sm); color: var(--muted);">
-        <strong>Key components:</strong> Prevention training • Confidential reporting • Investigation protocols • Survivor support • Disciplinary action
-      </div>
-    </div>
-
-    <div class="reveal" style="margin-bottom: var(--space-lg); padding: var(--space-lg); background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-      <h3 style="margin-bottom: var(--space-sm);">Code of Conduct</h3>
-      <p style="color: var(--muted); margin-bottom: var(--space-md);">Clear behavioral standards for all staff, volunteers, and partners. Covers professional conduct, conflict of interest, data protection, and ethical decision-making. Violations subject to disciplinary action up to and including dismissal.</p>
-      <div style="background: var(--bg-alt); padding: var(--space-md); border-radius: var(--radius-md); font-size: var(--fs-sm); color: var(--muted);">
-        <strong>Key components:</strong> Professional conduct • Ethical behavior • Reporting obligations • Conflict of interest • Disciplinary procedures
-      </div>
-    </div>
-
-    <div class="reveal" style="margin-bottom: var(--space-lg); padding: var(--space-lg); background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-      <h3 style="margin-bottom: var(--space-sm);">Accessibility & Accountability</h3>
-      <p style="color: var(--muted); margin-bottom: var(--space-md);">Multiple confidential reporting channels for safeguarding concerns. Independent investigation and oversight. Transparent accountability processes. Protection for whistleblowers. Regular audits and assessments.</p>
-      <div style="background: var(--bg-alt); padding: var(--space-md); border-radius: var(--radius-md); font-size: var(--fs-sm); color: var(--muted);">
-        <strong>Key components:</strong> Hotline • Email reporting • Anonymous channels • Investigation standards • Whistleblower protection
-      </div>
-    </div>
-
-    <div class="reveal" style="padding: var(--space-lg); background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border);">
-      <h3 style="margin-bottom: var(--space-sm);">Victim-Centered Support</h3>
-      <p style="color: var(--muted); margin-bottom: var(--space-md);">Comprehensive support for survivors of abuse or exploitation. Trauma-informed approach. Psychosocial support, legal assistance, and community resources. Confidentiality and dignity maintained throughout.</p>
-      <div style="background: var(--bg-alt); padding: var(--space-md); border-radius: var(--radius-md); font-size: var(--fs-sm); color: var(--muted);">
-        <strong>Key components:</strong> Immediate support • Counseling services • Legal aid • Community resources • Long-term follow-up
-      </div>
-    </div>
+  <div style="text-align:center;max-width:660px;margin:0 auto clamp(28px,5vw,44px)">
+    <span class="section-tag">Our Framework</span>
+    <h2 class="section-h2">Policies that put protection <em>into practice</em></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(14px,2.5vw,22px);max-width:1080px;margin:0 auto">
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg></div><h3 style="margin-bottom:8px">Child Protection Policy</h3><p style="color:var(--muted)">Comprehensive policies protecting children from abuse, exploitation, and neglect. All staff undergo vetting, training, and annual certification, and programmes are designed with child protection at the centre.</p><p style="color:var(--gold-ink);font-size:var(--fs-xs);font-weight:600;margin-top:10px">Screening processes · Code of conduct · Incident reporting · Support services · Community engagement</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3 style="margin-bottom:8px">Prevention of Sexual Exploitation, Abuse and Harassment (PSEA)</h3><p style="color:var(--muted)">Zero tolerance for sexual exploitation, abuse, or harassment. Prevention training for all staff, safe reporting mechanisms for survivors, and survivor-centred support and accountability measures.</p><p style="color:var(--gold-ink);font-size:var(--fs-xs);font-weight:600;margin-top:10px">Prevention training · Confidential reporting · Investigation protocols · Survivor support · Disciplinary action</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></div><h3 style="margin-bottom:8px">Code of Conduct</h3><p style="color:var(--muted)">Clear behavioural standards for all staff, volunteers, and partners — covering professional conduct, conflict of interest, data protection, and ethical decision-making. Violations are subject to disciplinary action up to and including dismissal.</p><p style="color:var(--gold-ink);font-size:var(--fs-xs);font-weight:600;margin-top:10px">Professional conduct · Ethical behaviour · Reporting obligations · Conflict of interest · Disciplinary procedures</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg></div><h3 style="margin-bottom:8px">Accessibility &amp; Accountability</h3><p style="color:var(--muted)">Multiple confidential reporting channels for safeguarding concerns, independent investigation and oversight, transparent accountability processes, protection for whistleblowers, and regular audits and assessments.</p><p style="color:var(--gold-ink);font-size:var(--fs-xs);font-weight:600;margin-top:10px">Hotline · Email reporting · Anonymous channels · Investigation standards · Whistleblower protection</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div><h3 style="margin-bottom:8px">Survivor-Centred Support</h3><p style="color:var(--muted)">Comprehensive support for survivors of abuse or exploitation using a trauma-informed approach — psychosocial support, legal assistance, and community resources, with confidentiality and dignity maintained throughout.</p><p style="color:var(--gold-ink);font-size:var(--fs-xs);font-weight:600;margin-top:10px">Immediate support · Counselling services · Legal aid · Community resources · Long-term follow-up</p></div>
   </div>
 </section>
 
-<!-- ══ REPORTING & CONTACT ══ -->
-<section class="section" style="background: linear-gradient(135deg, rgba(193, 33, 91, 0.1) 0%, rgba(232, 146, 42, 0.05) 100%); border-radius: var(--radius-lg); padding: var(--space-lg);">
-  <h2 style="text-align: center; margin-bottom: var(--space-lg);">Reporting <em>Safeguarding Concerns</em></h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--space-lg);">
-    <div class="reveal">
-      <h3 style="margin-bottom: var(--space-md);">How to Report</h3>
-      <p style="color: var(--muted); margin-bottom: var(--space-lg);">If you have concerns about safeguarding, abuse, or exploitation, please report immediately through any of the following channels:</p>
-      
-      <ul style="list-style: none; color: var(--muted); font-size: var(--fs-sm);">
-        <li style="margin-bottom: var(--space-md); padding-bottom: var(--space-md); border-bottom: 1px solid rgba(0,0,0,0.1);">
-          <strong style="color: var(--ink);">Email (Confidential)</strong><br/>
-          safeguarding@ascend-futures.org
-        </li>
-        <li style="margin-bottom: var(--space-md); padding-bottom: var(--space-md); border-bottom: 1px solid rgba(0,0,0,0.1);">
-          <strong style="color: var(--ink);">Phone Hotline</strong><br/>
-          +1-855-SAFE-AF (1-855-723-3236)<br/>
-          Available 24/7, all languages
-        </li>
-        <li style="margin-bottom: var(--space-md); padding-bottom: var(--space-md); border-bottom: 1px solid rgba(0,0,0,0.1);">
-          <strong style="color: var(--ink);">In-Person</strong><br/>
-          Contact our safeguarding office in any country where we operate
-        </li>
-        <li>
-          <strong style="color: var(--ink);">Anonymous Reporting</strong><br/>
-          Use our anonymous online form on this website
-        </li>
-      </ul>
-    </div>
-
-    <div class="reveal">
-      <h3 style="margin-bottom: var(--space-md);">What We Guarantee</h3>
-      <ul style="list-style: none;">
-        <li style="margin-bottom: var(--space-md); padding-bottom: var(--space-md); border-bottom: 1px solid rgba(0,0,0,0.1);">
-          <div style="font-weight: 600; color: var(--green-vivid);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true" style="vertical-align:-2px;color:var(--green-bright);margin-right:6px"><polyline points="20 6 9 17 4 12"/></svg>Confidentiality</div>
-          <p style="color: var(--muted); font-size: var(--fs-sm);">Your identity and report details remain confidential unless you wish to be identified.</p>
-        </li>
-        <li style="margin-bottom: var(--space-md); padding-bottom: var(--space-md); border-bottom: 1px solid rgba(0,0,0,0.1);">
-          <div style="font-weight: 600; color: var(--green-vivid);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true" style="vertical-align:-2px;color:var(--green-bright);margin-right:6px"><polyline points="20 6 9 17 4 12"/></svg>No Retaliation</div>
-          <p style="color: var(--muted); font-size: var(--fs-sm);">We protect reporters from retaliation. Any adverse action is prohibited by policy.</p>
-        </li>
-        <li style="margin-bottom: var(--space-md); padding-bottom: var(--space-md); border-bottom: 1px solid rgba(0,0,0,0.1);">
-          <div style="font-weight: 600; color: var(--green-vivid);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true" style="vertical-align:-2px;color:var(--green-bright);margin-right:6px"><polyline points="20 6 9 17 4 12"/></svg>Investigation</div>
-          <p style="color: var(--muted); font-size: var(--fs-sm);">All reports are investigated promptly and thoroughly by trained personnel.</p>
-        </li>
-        <li>
-          <div style="font-weight: 600; color: var(--green-vivid);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true" style="vertical-align:-2px;color:var(--green-bright);margin-right:6px"><polyline points="20 6 9 17 4 12"/></svg>Accountability</div>
-          <p style="color: var(--muted); font-size: var(--fs-sm);">Substantiated concerns result in disciplinary action and corrective measures.</p>
-        </li>
-      </ul>
-    </div>
+<section class="section" style="background:var(--bg-alt);margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);padding:var(--space-lg) calc(50vw - 50%)">
+  <div style="text-align:center;max-width:720px;margin:0 auto clamp(28px,5vw,44px)">
+    <span class="section-tag">Safeguarding at Ascend Futures Foundation</span>
+    <h2 class="section-h2">How safeguarding <em>is upheld</em></h2>
+    <p class="section-sub">AFF ensures that everyone who comes into contact with us — children, young people, adults, staff, volunteers, partners, and communities — is protected from abuse, exploitation, harassment, neglect, discrimination, and other forms of harm.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,2.5vw,22px);max-width:1120px;margin:0 auto">
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><h3 style="margin-bottom:8px">Leadership &amp; Accountability</h3><p style="color:var(--muted)">The Board and senior management have clear responsibility for safeguarding, with safeguarding included in organisational governance, risk management, and strategic planning.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></div><h3 style="margin-bottom:8px">Safeguarding Policies &amp; Procedures</h3><p style="color:var(--muted)">We develop and regularly update policies covering child safeguarding; prevention of sexual exploitation, abuse and harassment (PSEA); SGBV; protection from harassment and discrimination; code of conduct; whistleblowing and complaints; data protection and confidentiality; and online/digital safeguarding.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><h3 style="margin-bottom:8px">Safer Recruitment</h3><p style="color:var(--muted)">Safeguarding is integrated into recruitment through appropriate background and reference checks, safeguarding-related interview questions, clear job descriptions, and signed codes of conduct.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3 style="margin-bottom:8px">Training &amp; Capacity Building</h3><p style="color:var(--muted)">We ensure staff, volunteers, consultants, partners, and community actors understand safeguarding responsibilities, expected behaviours, reporting channels, and how to identify and respond to concerns.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg></div><h3 style="margin-bottom:8px">Safe Reporting &amp; Response</h3><p style="color:var(--muted)">We maintain confidential, accessible, survivor-centred reporting channels through which concerns can be raised safely and without fear of retaliation.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 style="margin-bottom:8px">Risk Assessment &amp; Safeguarding by Design</h3><p style="color:var(--muted)">We conduct safeguarding risk assessments before and during projects — particularly for work involving children, adolescents, SGBV survivors, vulnerable communities, field activities, and digital engagement.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3 style="margin-bottom:8px">Partner &amp; Supplier Due Diligence</h3><p style="color:var(--muted)">Implementing partners, consultants, contractors, and other relevant third parties are required to meet AFF&rsquo;s safeguarding standards.</p></div>
+    <div class="info-card reveal"><div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg></div><h3 style="margin-bottom:8px">Monitoring &amp; Continuous Improvement</h3><p style="color:var(--muted)">We include safeguarding indicators and checks within programme monitoring, conduct periodic reviews, document lessons learned, and take corrective action when risks or gaps are identified.</p></div>
   </div>
 </section>
 
-<!-- ══ TRAINING & OVERSIGHT ══ -->
-<section class="section">
-  <h2 style="text-align: center; margin-bottom: var(--space-lg);">Training & <em>Continuous Improvement</em></h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--space-lg); align-items: center;">
-    <img src="assets/images/community-engagement.jpg" alt="Safeguarding training" style="border-radius: var(--radius-lg); height: 350px; object-fit: cover;">
-    
-    <div>
-      <div class="reveal" style="margin-bottom: var(--space-lg);">
-        <h3 style="margin-bottom: var(--space-sm);">Universal Training</h3>
-        <p style="color: var(--muted);">All staff, volunteers, and board members receive mandatory safeguarding training upon onboarding and annually thereafter. Training is specific to role and context, covering policies, reporting procedures, and trauma-informed approaches.</p>
-      </div>
-
-      <div class="reveal" style="margin-bottom: var(--space-lg);">
-        <h3 style="margin-bottom: var(--space-sm);">Specialist Capacity</h3>
-        <p style="color: var(--muted);">Dedicated safeguarding officers in every region. Specialized training for field teams, program managers, and leadership on risk assessment and incident response.</p>
-      </div>
-
-      <div class="reveal">
-        <h3 style="margin-bottom: var(--space-sm);">Independent Audits</h3>
-        <p style="color: var(--muted);">Annual third-party audits of our safeguarding framework. Results are published publicly. We act on recommendations immediately.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CTA ══ -->
-<section class="section" style="text-align: center;">
-  <div class="content">
-    <h2>Questions About Our <em>Safeguarding Practices?</em></h2>
-    <p>We're committed to transparency and accountability. Contact our safeguarding team or review our full policy document.</p>
-    <a href="contact.html" class="btn-primary">Contact Safeguarding Team</a>
-  </div>
+<section class="section cta-section" style="text-align:center">
+  <h2 style="margin-bottom:var(--space-sm)">Raise a safeguarding concern</h2>
+  <p style="color:var(--muted);max-width:560px;margin:0 auto var(--space-md)">Concerns can be raised confidentially and without fear of retaliation. Every report is taken seriously.</p>
+  <a href="mailto:info@ascendfuturesfoundation.org?subject=Safeguarding%20Concern" class="btn-primary">Report a Concern</a>
 </section>
 
 <!-- ══ FOOTER ══ -->
@@ -313,10 +195,14 @@
       <p class="foot-desc">"Building Dreams, Transforming Communities." A Zambian youth-focused and woman-led non-profit advancing equitable health, gender justice, and youth leadership.<br><br>Stand No 287/15, Chipata Compound, along Highland Road, Lusaka<br>info@ascendfuturesfoundation.org<br>+260 770 983 978</p>
       <div class="footer-newsletter">
         <span class="newsletter-label">Get Updates</span>
-        <div class="newsletter-input-group">
-          <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
-          <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
-        </div>
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return subscribeNewsletter(event)">
+          <input type="hidden" name="form-name" value="newsletter">
+          <p hidden aria-hidden="true"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="newsletter-input-group">
+            <input type="email" name="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </div>
+        </form>
         <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
       </div>
       <div class="socials">
@@ -363,6 +249,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=6"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>
