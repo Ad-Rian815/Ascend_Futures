@@ -188,7 +188,7 @@ function handleVolunteer(e){
 
 /* ── HERO STAT COUNT-UP (runs on load / when scrolled into view) ── */
 (function(){
-  var els = document.querySelectorAll('.stat-val[data-count]');
+  var els = document.querySelectorAll('[data-count]');   /* hero stats + impact counters */
   if(!els.length) return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function fmt(n){ return n.toLocaleString('en-US'); }
