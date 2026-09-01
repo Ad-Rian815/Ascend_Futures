@@ -249,3 +249,39 @@ function handleVolunteer(e){
   var t;
   window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(fit, 120); });
 })();
+
+
+/* ── STAFF BIOGRAPHY POPUP ── */
+function openBio(card){
+  var modal = document.getElementById('bioModal');
+  if(!modal){
+    document.body.insertAdjacentHTML('beforeend',
+      '<div class="modal-wrap bio-modal" id="bioModal">' +
+        '<div class="modal bio-card">' +
+          '<button class="bio-close" onclick="closeBio()" aria-label="Close">&times;</button>' +
+          '<img class="bio-photo" id="bioPhoto" src="" alt="">' +
+          '<div class="bio-text">' +
+            '<span class="section-tag" id="bioRole"></span>' +
+            '<h3 id="bioName"></h3>' +
+            '<p id="bioBody"></p>' +
+          '</div>' +
+        '</div>' +
+      '</div>');
+    modal = document.getElementById('bioModal');
+  }
+  var img = card.querySelector('.person-photo');
+  var photo = document.getElementById('bioPhoto');
+  if(img){ photo.src = img.getAttribute('src'); photo.alt = img.getAttribute('alt') || ''; photo.hidden = false; }
+  else { photo.hidden = true; }
+  document.getElementById('bioRole').textContent = card.getAttribute('data-role') || '';
+  document.getElementById('bioName').textContent = card.getAttribute('data-name') || '';
+  document.getElementById('bioBody').innerHTML = card.getAttribute('data-bio') || '';
+  modal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+  var btn = modal.querySelector('.bio-close'); if(btn) btn.focus();
+}
+function closeBio(){
+  var m = document.getElementById('bioModal');
+  if(m) m.classList.remove('show');
+  document.body.style.overflow = '';
+}
