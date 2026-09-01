@@ -2930,3 +2930,12 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
   .bio-modal .bio-card { grid-template-columns: 1fr; max-height: 88svh; overflow-y: auto; }
   .bio-card .bio-photo { min-height: 240px; object-position: center 12%; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   FIX: one separator only — the old ticker star (.m-item::after)
+   was still rendering next to the new dot.
+══════════════════════════════════════════════════════════════ */
+.marquee-band.static-band .m-item::after {
+  content: none !important;
+  margin: 0 !important;
+}
