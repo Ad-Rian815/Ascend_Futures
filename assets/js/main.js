@@ -259,24 +259,51 @@ function openBio(card){
       '<div class="modal-wrap bio-modal" id="bioModal">' +
         '<div class="modal bio-card">' +
           '<button class="bio-close" onclick="closeBio()" aria-label="Close">&times;</button>' +
-          '<img class="bio-photo" id="bioPhoto" src="" alt="">' +
+          '<div class="bio-media"><img class="bio-photo" id="bioPhoto" src="" alt="">' +
+            '<span class="bio-initials" id="bioInitials" aria-hidden="true"></span></div>' +
           '<div class="bio-text">' +
             '<span class="section-tag" id="bioRole"></span>' +
             '<h3 id="bioName"></h3>' +
-            '<p id="bioBody"></p>' +
+            '<div id="bioBody"></div>' +
+            '<a id="bioLink" class="bio-link" href="#" target="_blank" rel="noopener" hidden>View LinkedIn profile →</a>' +
           '</div>' +
         '</div>' +
       '</div>');
     modal = document.getElementById('bioModal');
   }
-  var img = card.querySelector('.person-photo');
+  var img   = card.querySelector('.person-photo');
   var photo = document.getElementById('bioPhoto');
-  if(img){ photo.src = img.getAttribute('src'); photo.alt = img.getAttribute('alt') || ''; photo.hidden = false; }
-  else { photo.hidden = true; }
+  var inits = document.getElementById('bioInitials');
+  if(img){
+    photo.src = img.getAttribute('src');
+    photo.alt = img.getAttribute('alt') || '';
+    photo.hidden = false; inits.hidden = true;
+  } else {
+    photo.hidden = true; inits.hidden = false;
+    var badge = card.querySelector('.person-initials');
+    inits.textContent = badge ? badge.textContent : '';
+  }
   document.getElementById('bioRole').textContent = card.getAttribute('data-role') || '';
   document.getElementById('bioName').textContent = card.getAttribute('data-name') || '';
-  document.getElementById('bioBody').innerHTML = card.getAttribute('data-bio') || '';
+
+  /* bio text is stored with blank lines between paragraphs */
+  var raw = card.getAttribute('data-bio') || '';
+  var body = document.getElementById('bioBody');
+  body.innerHTML = '';
+  raw.split(/\n\s*\n/).forEach(function(para){
+    if(!para.trim()) return;
+    var p = document.createElement('p');
+    p.textContent = para.trim();
+    body.appendChild(p);
+  });
+
+  var link = document.getElementById('bioLink');
+  var url = card.getAttribute('data-link');
+  if(url){ link.href = url; link.hidden = false; } else { link.hidden = true; }
+
   modal.classList.add('show');
+  modal.scrollTop = 0;
+  var sc = modal.querySelector('.bio-card'); if(sc) sc.scrollTop = 0;
   document.body.style.overflow = 'hidden';
   var btn = modal.querySelector('.bio-close'); if(btn) btn.focus();
 }

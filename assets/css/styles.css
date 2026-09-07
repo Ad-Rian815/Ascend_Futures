@@ -2939,3 +2939,49 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
   content: none !important;
   margin: 0 !important;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   TEAM: cards awaiting photos + longer biographies in the popup
+══════════════════════════════════════════════════════════════ */
+/* card with no photo yet — brand-coloured panel with initials */
+.person-card.no-photo {
+  background: linear-gradient(150deg, var(--green-bright), var(--green-deep));
+}
+.person-card .person-initials {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7vw, 4.4rem);
+  font-weight: 700;
+  color: rgba(255,255,255,.22);
+  letter-spacing: .04em;
+  z-index: 0;
+}
+.person-card.no-photo::after {
+  background: linear-gradient(180deg, rgba(9,32,19,0) 35%, rgba(9,32,19,.55) 70%, rgba(9,32,19,.9) 100%);
+}
+
+/* popup: photo/initials panel + scrollable biography */
+.bio-modal .bio-card { max-height: 86svh; }
+.bio-card .bio-media { position: relative; background: linear-gradient(150deg, var(--green-bright), var(--green-deep)); }
+.bio-card .bio-initials {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.4rem; font-weight: 700; color: rgba(255,255,255,.3);
+}
+.bio-card .bio-text { overflow-y: auto; max-height: 86svh; }
+.bio-card .bio-text #bioBody p {
+  color: var(--muted); font-size: var(--fs-sm); line-height: 1.75; margin-bottom: 10px;
+}
+.bio-card .bio-text #bioBody p:last-child { margin-bottom: 0; }
+.bio-link {
+  display: inline-block; margin-top: 6px;
+  font-size: var(--fs-xs); font-weight: 700; color: var(--gold-ink);
+  border-bottom: 1px solid var(--border-gold); padding-bottom: 2px;
+}
+.bio-link:hover { color: var(--gold); }
+@media (max-width: 620px){
+  .bio-card .bio-media { min-height: 220px; }
+  .bio-card .bio-text { max-height: none; }
+}
