@@ -2637,7 +2637,7 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
   width: 100%; height: 100%;
   min-height: 210px;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: 49% 23%;
   display: block;
 }
 .ed-card .ed-body {
@@ -2984,4 +2984,66 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
 @media (max-width: 620px){
   .bio-card .bio-media { min-height: 220px; }
   .bio-card .bio-text { max-height: none; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FIX: biography popup layout (the photo column had no resolvable
+   height, so the card and its contents sat misaligned)
+══════════════════════════════════════════════════════════════ */
+.modal-wrap.bio-modal { align-items: center; padding: clamp(12px, 3vw, 24px); }
+
+.bio-modal .bio-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  max-width: 700px;
+  max-height: min(86svh, 640px);
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  border-radius: 22px;
+  background: var(--surface);
+}
+/* photo column: give it a definite box so the image can fill it */
+.bio-card .bio-media {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--green-bright), var(--green-deep));
+}
+.bio-card .bio-photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  display: block;
+}
+.bio-card .bio-initials { position: absolute; inset: 0; }
+
+/* text column scrolls on its own, so the card never overflows the screen */
+.bio-card .bio-text {
+  min-width: 0;
+  max-height: min(86svh, 640px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: clamp(22px, 3vw, 32px);
+  padding-right: clamp(46px, 5vw, 56px);   /* clear of the close button */
+  display: block;
+}
+.bio-card .bio-text .section-tag { display: block; margin-bottom: 6px; }
+.bio-card .bio-text h3 { margin: 0 0 12px; }
+.bio-close { top: 12px; right: 14px; }
+
+@media (max-width: 680px){
+  .bio-modal .bio-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 230px minmax(0, 1fr);
+    max-height: 90svh;
+  }
+  .bio-card .bio-media { height: 230px; min-height: 230px; }
+  .bio-card .bio-text { max-height: none; padding: 20px; padding-top: 18px; }
 }

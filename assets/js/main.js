@@ -277,6 +277,7 @@ function openBio(card){
   if(img){
     photo.src = img.getAttribute('src');
     photo.alt = img.getAttribute('alt') || '';
+    photo.style.objectPosition = img.getAttribute('data-focus') || 'center 20%';
     photo.hidden = false; inits.hidden = true;
   } else {
     photo.hidden = true; inits.hidden = false;
