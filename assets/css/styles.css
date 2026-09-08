@@ -2096,30 +2096,11 @@ footer { border-top: 1px solid var(--border); }
 }
 .jobs-toolbar #jobSearch { max-width: 320px; margin: 0; flex: 1 1 220px; }
 .job-filters { display: flex; flex-wrap: wrap; gap: 8px; }
-.jf {
-  background: rgba(20,55,33,0.05);
-  border: 1px solid var(--border);
-  color: var(--muted);
-  padding: 9px 16px; border-radius: 999px;
-  font-family: 'Outfit', sans-serif; font-size: var(--fs-sm);
-  cursor: pointer; transition: all .2s;
-}
-.jf:hover { color: var(--ink); border-color: var(--border-gold); }
-.jf.active { background: var(--gold); border-color: var(--gold); color: var(--green-deep); font-weight: 600; }
 
 .jobs-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
-.job-card {
-  display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: clamp(18px,3vw,26px);
-  box-shadow: var(--shadow-card);
-  transition: border-color .25s, transform .25s;
-}
-.job-card:hover { border-color: var(--border-gold); transform: translateY(-2px); }
 .job-main h3 { font-family: 'Cormorant Garamond', serif; font-size: var(--fs-lg); font-weight: 700; margin-bottom: 6px; }
 .job-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 8px; }
 .job-meta span { font-size: var(--fs-xs); color: var(--gold-ink); text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
-.job-card p { font-size: var(--fs-sm); color: var(--muted); line-height: 1.6; }
 .job-apply {
   flex-shrink: 0; background: var(--green-deep); color: #fff;
   padding: 11px 24px; border-radius: 999px; font-size: var(--fs-sm); font-weight: 600;
@@ -3046,4 +3027,40 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
   }
   .bio-card .bio-media { height: 230px; min-height: 230px; }
   .bio-card .bio-text { max-height: none; padding: 20px; padding-top: 18px; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FRAMING: give photographs more room so faces and scenes aren't
+   cropped so tightly (portrait sources are roughly 3:4)
+══════════════════════════════════════════════════════════════ */
+/* Team cards: taller, so a 3:4 portrait loses far less at top and bottom */
+.info-card.person-card {
+  min-height: clamp(340px, 40vw, 430px);
+}
+@media (min-width: 900px){
+  .info-card.person-card { min-height: 400px; }
+}
+@media (max-width: 520px){
+  .info-card.person-card { min-height: 380px; }
+}
+/* portraits: fill width, sit just below the top so heads stay complete */
+.person-card .person-photo { object-fit: cover; }
+
+/* Cause cards on the home page: a little more height for portrait shots */
+.cause-img-wrap { height: clamp(200px, 28vw, 280px); }
+
+/* Gallery strip: taller band, so tiles aren't squeezed into thin slivers */
+.gallery-strip { height: clamp(240px, 34vw, 440px); }
+@media (max-width: 760px){
+  .gallery-strip { grid-template-columns: repeat(3, 1fr); height: clamp(200px, 46vw, 300px); }
+  .gallery-strip .gal-item:nth-child(n+4) { display: none; }
+}
+
+/* Nav dropdown feature image: slightly taller frame */
+.mega-feature { min-height: 210px; }
+
+/* Biography popup photo: show more of the person */
+.bio-card .bio-photo { object-fit: cover; }
+@media (min-width: 681px){
+  .bio-modal .bio-card { grid-template-columns: 260px minmax(0, 1fr); }
 }
