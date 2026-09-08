@@ -198,7 +198,7 @@ function handleVolunteer(e){
     var target = parseInt(el.getAttribute('data-count'), 10) || 0;
     var suffix = el.getAttribute('data-suffix') || '';
     if(reduce){ el.textContent = fmt(target) + suffix; return; }
-    var dur = 1600, start = null;
+    var dur = 2800, start = null;
     function step(ts){
       if(start === null) start = ts;
       var p = Math.min((ts - start) / dur, 1);
