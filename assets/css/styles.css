@@ -3064,3 +3064,35 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
 @media (min-width: 681px){
   .bio-modal .bio-card { grid-template-columns: 260px minmax(0, 1fr); }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   FIX: impact quote sat on top of the photo; staff photos still tight
+══════════════════════════════════════════════════════════════ */
+/* The collage leaves a free corner at bottom-right: the large image ends
+   36% up, the small image occupies the left. Put the quote in that gap. */
+.impact-visual .imp-img-a { height: 64%; }
+.impact-visual .imp-img-b { width: 46%; height: 38%; }
+.impact-visual .imp-quote {
+  top: auto;
+  bottom: 2%;
+  right: 0;
+  max-width: 48%;
+  font-size: clamp(.78rem, 1.25vw, .95rem);
+  line-height: 1.45;
+  padding: clamp(11px, 1.5vw, 17px) clamp(13px, 1.8vw, 19px);
+}
+@media (max-width: 1100px){
+  .impact-visual .imp-img-a { height: 60%; }
+  .impact-visual .imp-quote { font-size: .78rem; padding: 10px 12px; }
+}
+@media (max-width: 620px){
+  .impact-visual .imp-img-a { height: 55%; }
+  .impact-visual .imp-img-b { height: 34%; }
+  .impact-visual .imp-quote { font-size: .72rem; line-height: 1.4; padding: 9px 11px; bottom: 1%; }
+}
+
+/* Team portraits: taller frames, so heads stay complete and any crop
+   comes off the sides rather than the top of the head. */
+.info-card.person-card { min-height: clamp(380px, 46vw, 500px); }
+@media (min-width: 900px){ .info-card.person-card { min-height: 470px; } }
+@media (max-width: 520px){ .info-card.person-card { min-height: 420px; } }
