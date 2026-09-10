@@ -3196,3 +3196,60 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
 @media (max-width: 520px){
   .event-feature .event-media { grid-template-columns: 1fr; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   PRESS: release list (image + label, date, headline)
+══════════════════════════════════════════════════════════════ */
+.pr-list { display: flex; flex-direction: column; gap: clamp(14px, 2vw, 20px); }
+.pr-card {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: clamp(16px, 2.4vw, 28px);
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease, border-color .3s ease;
+}
+.pr-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-gold);
+  box-shadow: 0 18px 42px rgba(16,44,28,.13);
+}
+.pr-media { display: block; height: 100%; min-height: 190px; overflow: hidden; }
+.pr-media img {
+  width: 100%; height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.pr-card:hover .pr-media img { transform: scale(1.04); }
+.pr-body { display: flex; flex-direction: column; gap: 7px; padding: clamp(18px, 2.4vw, 26px) clamp(18px, 2.4vw, 30px) clamp(18px, 2.4vw, 26px) 0; }
+.pr-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.pr-label {
+  font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase; letter-spacing: .09em;
+  color: var(--gold-ink); background: rgba(252,156,0,.14);
+  border: 1px solid rgba(252,156,0,.28);
+  padding: 4px 11px; border-radius: 999px;
+}
+.pr-date { font-size: var(--fs-xs); color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+.pr-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.3vw, 1.6rem);
+  font-weight: 700; line-height: 1.18; color: var(--ink);
+}
+.pr-standfirst { font-size: var(--fs-sm); color: var(--muted); line-height: 1.7; }
+.pr-more {
+  margin-top: 4px; font-size: var(--fs-xs); font-weight: 700;
+  color: var(--gold-ink); text-transform: uppercase; letter-spacing: .08em;
+}
+.pr-card:hover .pr-more { color: var(--gold); }
+@media (max-width: 720px){
+  .pr-card { grid-template-columns: 1fr; }
+  .pr-media, .pr-media img { min-height: 200px; }
+  .pr-body { padding: 18px 20px 22px; }
+}
