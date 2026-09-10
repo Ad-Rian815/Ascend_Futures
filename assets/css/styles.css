@@ -3253,3 +3253,17 @@ nav#mainNav .nav-links { gap: 2px; align-items: center; }
   .pr-media, .pr-media img { min-height: 200px; }
   .pr-body { padding: 18px 20px 22px; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   TEAM: group card (Ascenders) — a wide photo needs a wider frame
+   than the portrait headshots, so it spans two columns where there
+   is room and sits shorter than a portrait card.
+══════════════════════════════════════════════════════════════ */
+.person-card.group-card { min-height: clamp(300px, 34vw, 380px); }
+@media (min-width: 760px){
+  .person-card.group-card { grid-column: span 2; min-height: 360px; }
+}
+@media (min-width: 900px){
+  .person-card.group-card { min-height: 380px; }
+}
+.person-card.group-card .person-photo { object-fit: cover; }
